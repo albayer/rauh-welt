@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+* {
+    font-family: "Noto Sans", serif;
+    text-decoration: none !important;
+}
+
+body {
+    background-color: f8f9fa;
+}
+
+#topHeader {
+    background-color: #393939;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+}
+
+#topHeader p {
+    padding: 15px 0px;
+    padding-bottom: 0px;
+}
+
+.navbar-expand-lg {
+    background-image: url(../img/background.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: 60px;
+    margin-top: 20px;
+}
+
+.nav-item {
+    font-weight: 500;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.col-md-2 a img {
+    height: 120px !important;
+    width: 1000px;
+    margin-top: 25px;
+    margin-left: 6px;
+}
+
+footer {
+    background-color: #000;
+}
+
+#socialMedia a {
+    font-size: 32px;
+    margin: 0 30px;
+    color: #FFF;
+}
+
+.bi-youtube:hover {
+    color: red;
+}
+
+.bi-facebook:hover {
+    color: #0866ff;
+}
+
+.bi-instagram:hover {
+    color: #e95950;
+}
+
+.bi-linkedin:hover {
+    color: #0a66c2;
+}
+
+#topFooter a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 12px;
+}
+
+#topFooter a,
+#topFooter p,
+#topFooter span {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#topFooter .col-md-4:nth-child(3) div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+
+#bottomFooter a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 12px;
+}

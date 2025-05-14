@@ -11,7 +11,7 @@ body {
 }
 
 #topHeader {
-    background-color: #000;
+    background-color: #000 !important;
     font-weight: 500;
     color: #fff;
     text-align: center;
@@ -28,7 +28,7 @@ body {
     background-position: center;
     background-size: 100%;
     height: 60px;
-    margin-top: 20px !important;
+    margin-top: 7px !important;
 }
 
 

@@ -1,4 +1,11 @@
-<?php require_once('../assets/baglan.php'); ?>
+<?php require_once('../assets/baglan.php');
+
+session_start();
+if (!isset($_SESSION['userName'])) {
+    die('Giriş yetkiniz yok.');
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="tr">
@@ -31,6 +38,7 @@
                 <div class="col-md-2 bg-black py-3" id="adminNav">
                     <a href="dashboard.php" class="text-white">Başlangıç</a><br>
                     <a href="kategoriler.php" class="text-white">Kategoriler</a><br>
+                    <a href="urun-listesi.php" class="text-white">Ürün Listesi</a><br>
                     <div class="accordion-item">
                         <h2 class="accordion-menu">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="color: #fff; font-size:14px;">
@@ -78,7 +86,4 @@
                     </div>
                     <a href="logout.php" class="text-warning">Güvenli Çıkış</a>
                 </div>
-            </div>
-            <div class="col-md-10 bg-light py-3">
-
-                <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="col-md-10 bg-light py-3">

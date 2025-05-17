@@ -1,0 +1,60 @@
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Yeni Proje Ekle</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+
+                        <form method="post" class="row" enctype="multipart/form-data">
+                            <div class="col-12">
+                                <input type="text" name="projeAdi" placeholder="Proje Adı Girin" class="form-control">
+                            </div>
+                            <div class="col-12 my-3">
+                                <textarea name="aciklama" placeholder="Proje Açıklaması Girin" rows="6" class="form-control"></textarea>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Firma Adı</label>
+                                <input type="text" name="kurum" placeholder="Firma Adı Girin" class="form-control">
+                            </div>
+                            <div class="col-md-4">
+                                <label>Proje Türü</label>
+                                <select name="projeturu" class="form-control">
+                                    <option value="">Seçiniz</option>
+                                    <option value="Bireysel">Bireysel</option>
+                                    <option value="Kurumsal">Kurumsal</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Hizmet Türü</label>
+                                <select name="hizmet" class="form-control">
+                                    <option value="">Seçiniz</option>
+                                    <option value="Dijital Pazarlama Hizmeti">Dijital Pazarlama Hizmeti</option>
+                                    <option value="Grafik Tasarımı Hizmeti">Grafik Tasarımı Hizmeti</option>
+                                    <option value="Web Tasarımı Hizmeti">Web Tasarımı Hizmeti</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 my-3">
+                                <label>Kullanılan Teknolojiler</label>
+                                <input type="text" name="teknoloji" placeholder="Kullanılan Teknolojiler" class="form-control">
+                            </div>
+                            <div class="col-md-4 my-3">
+                                <label>Proje Adresi</label>
+                                <input type="url" name="adres" placeholder="https://www.projeadresi.com" class="form-control">
+                            </div>
+                            <div class="col-md-4 my-3">
+                                <label>Proje Görseli</label>
+                                <input type="file" name="gorsel" class="form-control">
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-success w-100">Kaydet</button>
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div

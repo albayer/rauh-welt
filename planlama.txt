@@ -1,5 +1,5 @@
 -Kategoriler-
-Türü - Açıklama - Durum - Tarih - Düzenle - Sil
+Türü - Açıklama - Durum - Düzenle - Sil
 
 -Marka/Model-
 Marka - Model - Tür - Açıklama - Düzenle - Sil

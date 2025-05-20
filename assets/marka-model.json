@@ -1,0 +1,260 @@
+{
+    "motosikletler": [
+        {
+            "marka": "Honda",
+            "modeller": [
+                {
+                    "isim": "CBR500R",
+                    "motor_cc": 471,
+                    "silindir": 2,
+                    "motor_tipi": "DOHC paralel twin",
+                    "beygir_gucu": 47,
+                    "yil": 2024
+                },
+                {
+                    "isim": "CB650R",
+                    "motor_cc": 649,
+                    "silindir": 4,
+                    "motor_tipi": "Inline-4",
+                    "beygir_gucu": 94,
+                    "yil": 2024
+                },
+                {
+                    "isim": "Africa Twin",
+                    "motor_cc": 1084,
+                    "silindir": 2,
+                    "motor_tipi": "Parallel twin",
+                    "beygir_gucu": 101,
+                    "yil": 2023
+                },
+                {
+                    "isim": "Rebel 500",
+                    "motor_cc": 471,
+                    "silindir": 2,
+                    "motor_tipi": "Parallel twin",
+                    "beygir_gucu": 45,
+                    "yil": 2023
+                }
+            ]
+        },
+        {
+            "marka": "Yamaha",
+            "modeller": [
+                {
+                    "isim": "YZF-R3",
+                    "motor_cc": 321,
+                    "silindir": 2,
+                    "motor_tipi": "DOHC parallel twin",
+                    "beygir_gucu": 42,
+                    "yil": 2024
+                },
+                {
+                    "isim": "MT-07",
+                    "motor_cc": 689,
+                    "silindir": 2,
+                    "motor_tipi": "CP2 parallel twin",
+                    "beygir_gucu": 74,
+                    "yil": 2024
+                },
+                {
+                    "isim": "Ténéré 700",
+                    "motor_cc": 689,
+                    "silindir": 2,
+                    "motor_tipi": "CP2 parallel twin",
+                    "beygir_gucu": 72,
+                    "yil": 2023
+                },
+                {
+                    "isim": "XSR900",
+                    "motor_cc": 890,
+                    "silindir": 3,
+                    "motor_tipi": "CP3 inline triple",
+                    "beygir_gucu": 119,
+                    "yil": 2023
+                }
+            ]
+        },
+        {
+            "marka": "Kawasaki",
+            "modeller": [
+                {
+                    "isim": "Ninja 400",
+                    "motor_cc": 399,
+                    "silindir": 2,
+                    "motor_tipi": "Parallel twin",
+                    "beygir_gucu": 49,
+                    "yil": 2024
+                },
+                {
+                    "isim": "Z650",
+                    "motor_cc": 649,
+                    "silindir": 2,
+                    "motor_tipi": "Parallel twin",
+                    "beygir_gucu": 68,
+                    "yil": 2024
+                },
+                {
+                    "isim": "Versys 650",
+                    "motor_cc": 649,
+                    "silindir": 2,
+                    "motor_tipi": "Parallel twin",
+                    "beygir_gucu": 66,
+                    "yil": 2023
+                },
+                {
+                    "isim": "Z900",
+                    "motor_cc": 948,
+                    "silindir": 4,
+                    "motor_tipi": "Inline-4",
+                    "beygir_gucu": 125,
+                    "yil": 2024
+                }
+            ]
+        },
+        {
+            "marka": "Suzuki",
+            "modeller": [
+                {
+                    "isim": "GSX-R1000",
+                    "motor_cc": 999,
+                    "silindir": 4,
+                    "motor_tipi": "Inline-4",
+                    "beygir_gucu": 199,
+                    "yil": 2023
+                },
+                {
+                    "isim": "V-Strom 650",
+                    "motor_cc": 645,
+                    "silindir": 2,
+                    "motor_tipi": "V-twin",
+                    "beygir_gucu": 70,
+                    "yil": 2023
+                },
+                {
+                    "isim": "SV650",
+                    "motor_cc": 645,
+                    "silindir": 2,
+                    "motor_tipi": "V-twin",
+                    "beygir_gucu": 75,
+                    "yil": 2024
+                }
+            ]
+        },
+        {
+            "marka": "BMW",
+            "modeller": [
+                {
+                    "isim": "S 1000 RR",
+                    "motor_cc": 999,
+                    "silindir": 4,
+                    "motor_tipi": "Inline-4",
+                    "beygir_gucu": 207,
+                    "yil": 2024
+                },
+                {
+                    "isim": "R 1250 GS",
+                    "motor_cc": 1254,
+                    "silindir": 2,
+                    "motor_tipi": "Boxer twin",
+                    "beygir_gucu": 136,
+                    "yil": 2024
+                },
+                {
+                    "isim": "F 900 R",
+                    "motor_cc": 895,
+                    "silindir": 2,
+                    "motor_tipi": "Parallel twin",
+                    "beygir_gucu": 105,
+                    "yil": 2023
+                }
+            ]
+        },
+        {
+            "marka": "KTM",
+            "modeller": [
+                {
+                    "isim": "Duke 390",
+                    "motor_cc": 373,
+                    "silindir": 1,
+                    "motor_tipi": "Single cylinder",
+                    "beygir_gucu": 44,
+                    "yil": 2024
+                },
+                {
+                    "isim": "RC 390",
+                    "motor_cc": 373,
+                    "silindir": 1,
+                    "motor_tipi": "Single cylinder",
+                    "beygir_gucu": 44,
+                    "yil": 2023
+                },
+                {
+                    "isim": "1290 Super Duke R",
+                    "motor_cc": 1301,
+                    "silindir": 2,
+                    "motor_tipi": "V-twin",
+                    "beygir_gucu": 180,
+                    "yil": 2024
+                }
+            ]
+        },
+        {
+            "marka": "Harley-Davidson",
+            "modeller": [
+                {
+                    "isim": "Iron 883",
+                    "motor_cc": 883,
+                    "silindir": 2,
+                    "motor_tipi": "V-twin",
+                    "beygir_gucu": 50,
+                    "yil": 2022
+                },
+                {
+                    "isim": "Street Bob",
+                    "motor_cc": 1868,
+                    "silindir": 2,
+                    "motor_tipi": "Milwaukee-Eight 114",
+                    "beygir_gucu": 94,
+                    "yil": 2023
+                },
+                {
+                    "isim": "Fat Boy",
+                    "motor_cc": 1868,
+                    "silindir": 2,
+                    "motor_tipi": "Milwaukee-Eight 114",
+                    "beygir_gucu": 94,
+                    "yil": 2024
+                }
+            ]
+        },
+        {
+            "marka": "Ducati",
+            "modeller": [
+                {
+                    "isim": "Panigale V4",
+                    "motor_cc": 1103,
+                    "silindir": 4,
+                    "motor_tipi": "Desmosedici Stradale V4",
+                    "beygir_gucu": 215,
+                    "yil": 2024
+                },
+                {
+                    "isim": "Monster 937",
+                    "motor_cc": 937,
+                    "silindir": 2,
+                    "motor_tipi": "Testastretta 11° L-Twin",
+                    "beygir_gucu": 111,
+                    "yil": 2023
+                },
+                {
+                    "isim": "Multistrada V4",
+                    "motor_cc": 1158,
+                    "silindir": 4,
+                    "motor_tipi": "Granturismo V4",
+                    "beygir_gucu": 170,
+                    "yil": 2024
+                }
+            ]
+        }
+    ]
+}

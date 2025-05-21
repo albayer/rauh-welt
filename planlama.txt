@@ -1,0 +1,10 @@
+-Kategoriler-
+Türü - Açıklama - Durum - Düzenle - Sil
+
+-Marka/Model-
+Marka - Model - Tür - Açıklama - Düzenle - Sil
+
+Teknik Özellik Gir
+Motor Tipi - Sıkıştırma Oranı - Yakıt Sistemi - Çalıştırma Sistemi - Yağlama - Ateşleme - Maksimum güç - Maksimum tork - Yakıt Tüketimi - Şanzıman - Debriyaj - Şasi Tipi - Lastik, ön - Lastik, arka - U x G x Y - Yerden yükseklik - Yakıt Kapasitesi - Koltuk yüksekliği - Boş kütle
+
+yakıt tüketimi - yakıt kapasitesi - lastik ön ebat - lastik arka ebat - 

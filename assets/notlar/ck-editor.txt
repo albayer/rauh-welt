@@ -1,0 +1,17 @@
+// Head etiketleri arasına
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+
+
+// Form Etiketleri Arasına
+<textarea name="content" id="editor1" placeholder="Teknik Özellikler"></textarea>
+<script>
+  ClassicEditor
+      .create(document.querySelector('#editor1'))
+      .then(editor => {
+         editor.ui.view.editable.element.style.height = '200px';
+         editor.ui.view.element.style.width = '100%';
+       })
+       .catch(error => {
+          console.error(error);
+       });
+</script>

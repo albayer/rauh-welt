@@ -33,68 +33,174 @@
                         <form method="post" enctype="multipart/form-data">
                             <div class="row my-3">
                                 <div class="col-md-6">
-                                    <select name="ustBaslik" class="form-control" required>
+                                    <select name="marka" class="form-control" required>
                                         <option value="">Marka Seçiniz</option>
                                         <?php
                                         $ustBaslik = $db->prepare('select * from marka order by marka asc');
                                         $ustBaslik->execute();
                                         foreach ($ustBaslik as $ustBaslikList) {
                                         ?>
-                                            <option value=""><?php echo $ustBaslikList['marka']; ?></option>
+                                            <option value="<?php echo $ustBaslikList['marka']; ?>"><?php echo $ustBaslikList['marka']; ?></option>
                                         <?php
                                         }
                                         ?>
                                     </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" name="baslik" placeholder="Model Adını Girin" class="form-control" required>
-                                    </div>
-                                    
-                                
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="model" placeholder="Model Adını Girin" class="form-control" required>
+                                </div>
                             </div>
-                            <input type="text" name="cc" placeholder="Motor Hacmini Girin" class="form-control">
-                            <input type="text" name="silindir" placeholder="Silindir Sayısı Girin" class="form-control my-3">
-                            <input type="text" name="hp" placeholder="HP Girin(Örn: 75 hp)" class="form-control">
-                            <input type="text" name="motor_tip" placeholder="Motor Tipini Girin" class="form-control my-3">
-                            <select name="model_yili" class="form-control">
-                                <option value="">Model Yılı Seçiniz</option>
-                                <?php
-                                for ($i = 2000; $i <= date("Y") + 1; $i++) {
-                                ?>
-                                    <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                                <?php
-                                }
-                                ?>
-                            </select>
-                            <input type="text" name="yakit_kapasite" placeholder="Yakıt Kapasitesini Girin" class="form-control my-3">
-                            <input type="text" name="yakit_tuketim" placeholder="Yakıt Tüketimini Girin" class="form-control">
-                            <input type="text" name="lastik_on" placeholder="Ön Lastik Ebatını Girin" class="form-control my-3">
-                            <input type="text" name="lastik_arka" placeholder="Arka Lastik Ebatını Girin" class="form-control">
-                            <input type="text" name="koltuk_yukseklik" placeholder="Koltuk Yüksekliğini Girin" class="form-control my-3">
-                            <input type="text" name="bos_kutle" placeholder="Boş Ağırlığını Girin" class="form-control">
-                            <input type="text" name="dolu_kutle" placeholder="Dolu Ağırlığını Girin" class="form-control my-3">
-                            <!-- CK Editor Start -->
-                            <textarea name="aciklama" id="aciklama" placeholder="Açıklama Girin" required></textarea>
-                            <script>
-                                ClassicEditor
-                                    .create(document.querySelector('#aciklama'))
-                                    .then(editor => {
-                                        editor.ui.view.editable.element.style.height = '200px';
-                                        editor.ui.view.element.style.width = '100%';
-                                    })
-                                    .catch(error => {
-                                        console.error(error);
-                                    });
-                            </script>
-                            <!-- CK Editor End -->
-                            <label class="mt-3"><b>Görsel Ekle</b></label>
-                            <input type="file" name="gorsel" class="form-control mb-3" required>
+                            <div class="row my-3">
+                                <div class="col-md-4">
+                                    <input type="text" name="cc" placeholder="Motor Hacmini Girin" class="form-control" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="silindir" placeholder="Silindir Sayısı Girin" class="form-control" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="kw" placeholder="kW Girin(Örn: 75 kW)" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row my-3">
+                                <div class="col-md-4">
+                                    <input type="text" name="motor_tipi" placeholder="Motor Tipini Girin" class="form-control" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <select name="tur" class="form-control" required>
+                                        <option value="">Motor Türünü Seçin</option>
+                                        <?php
+                                        $motorTuru = $db->prepare('select * from motosiklet_turleri order by tur asc');
+                                        $motorTuru->execute();
+                                        foreach ($motorTuru as $motorTuruList) {
+                                        ?>
+                                            <option value="<?php echo $motorTuruList['tur']; ?>"><?php echo $motorTuruList['tur']; ?></option>
+                                        <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <select name="model_yili" class="form-control" required>
+                                        <option value="">Model Yılı Seçiniz</option>
+                                        <?php
+                                        for ($i = date("Y") + 1; $i > 2010 + 1; $i--) {
+                                        ?>
+                                            <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                        <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row my-3">
+                                <div class="col-md-6">
+                                    <input type="text" name="yakit_kapasitesi" placeholder="Yakıt Kapasitesini Girin" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="yakit_tuketimi" placeholder="Yakıt Tüketimini Girin" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row my-3">
+                                <div class="col-md-6">
+                                    <input type="text" name="lastik_on" placeholder="Ön Lastik Ebatını Girin" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="lastik_arka" placeholder="Arka Lastik Ebatını Girin" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row my-3">
+                                <div class="col-md-6">
+                                    <input type="text" name="bos_kutle" placeholder="Boş Ağırlığını Girin" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="dolu_kutle" placeholder="Dolu Ağırlığını Girin" class="form-control" required>
+                                </div>
+                            </div>
+                            <input type="text" name="koltuk_yukseklik" placeholder="Koltuk Yüksekliğini Girin" class="form-control my-3" required>
+                            <textarea name="aciklama" id="aciklama" placeholder="Açıklama Girin" class="form-control" required></textarea>
+                            <input type="file" name="gorsel" class="form-control my-3" required>
                             <input type="submit" value="Kaydet" class="btn btn-success w-100" name="kaydet">
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+        <?php
+        if (isset($_POST['kaydet'])) {
+            $gorsel = '../assets/img/' . $_FILES['gorsel']['name'];
+            if (move_uploaded_file($_FILES['gorsel']['tmp_name'], $gorsel)) {
+                $modelEkle = $db->prepare('insert into marka_model(marka,model,cc,silindir,kw,motor_tipi,tur,model_yili,yakit_kapasitesi,yakit_tuketimi,lastik_on,lastik_arka,bos_kutle,dolu_kutle,koltuk_yukseklik,aciklama,gorsel) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+                $modelEkle->execute(array($_POST['marka'], $_POST['model'], $_POST['cc'], $_POST['silindir'], $_POST['kw'], $_POST['motor_tipi'], $_POST['tur'], $_POST['model_yili'], $_POST['yakit_kapasitesi'], $_POST['yakit_tuketimi'], $_POST['lastik_on'], $_POST['lastik_arka'], $_POST['bos_kutle'], $_POST['dolu_kutle'], $_POST['koltuk_yukseklik'], $_POST['aciklama'], $gorsel));
+                if ($modelEkle->rowCount()) {
+                    echo '<script>alert("Kayıt işlemi başarılı")</script><meta http-equiv="refresh" content="0; url=marka-model.php">';
+                } else {
+                    echo '<script>alert("Hata oluştu")</script><meta http-equiv="refresh" content="0; url=marka-model.php">';
+                }
+            }
+        }
+        ?>
+    </div>
+    <div class="col-12">
+        <table class="table table-stripped">
+            <thead>
+                <tr>
+                    <th style="width: 150px;">Görsel</th>
+                    <th>Marka</th>
+                    <th>Model</th>
+                    <th>Hacim</th>
+                    <th>Silindir</th>
+                    <th>kW</th>
+                    <th>Motor Tipi</th>
+                    <th>Türü</th>
+                    <th>Yıl</th>
+                    <th>Yakıt Kapasitesi</th>
+                    <th>Yakıt Tüketimi</th>
+                    <th>Lastik Ön</th>
+                    <th>Lastik Arka</th>
+                    <th>Boş Ağırlık</th>
+                    <th>Dolu Ağırlık</th>
+                    <th>Koltuk Yüksekliği</th>
+                    <th>Açıklama</th>
+                    <th>Düzenle</th>
+                    <th>Sil</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $modelList = $db->prepare('select * from marka_model order by marka asc');
+                $modelList->execute();
+                foreach ($modelList as  $modelListAll) {
+                ?>
+                <tr>
+                    <td><img src="<?php echo $modelListAll['gorsel']; ?>" alt="" class="w-100"></td>
+                    <td><?php echo $modelListAll['marka']; ?></td>
+                    <td><?php echo $modelListAll['model']; ?></td>
+                    <td><?php echo $modelListAll['cc']; ?></td>
+                    <td><?php echo $modelListAll['silindir']; ?></td>
+                    <td><?php echo $modelListAll['kw']; ?></td>
+                    <td><?php echo $modelListAll['motor_tipi']; ?></td>
+                    <td><?php echo $modelListAll['tur']; ?></td>
+                    <td><?php echo $modelListAll['model_yili']; ?></td>
+                    <td><?php echo $modelListAll['yakit_kapasitesi']; ?></td>
+                    <td><?php echo $modelListAll['yakit_tuketimi']; ?></td>
+                    <td><?php echo $modelListAll['lastik_on']; ?></td>
+                    <td><?php echo $modelListAll['lastik_arka']; ?></td>
+                    <td><?php echo $modelListAll['bos_kutle']; ?></td>
+                    <td><?php echo $modelListAll['dolu_kutle']; ?></td>
+                    <td><?php echo $modelListAll['koltuk_yukseklik']; ?></td>
+                    <td><?php echo $modelListAll['aciklama']; ?></td>
+                    <td><a href=""><button class="btn btn-warning">Düzenle</button></a></td>
+                    <td><a href=""><button class="btn btn-danger">Sil</button></a></td>
+                </tr>
+
+                <?php
+                }
+
+
+
+                ?>
+            </tbody>
+        </table>
     </div>
 </div>
 <?php require_once('footer.php'); ?>

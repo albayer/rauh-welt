@@ -48,7 +48,8 @@ if (!isset($_SESSION['userName'])) {
                             <div class="accordion-body">
                                 <ol style="list-style: none; color:#fff; margin-bottom:0px;">
                                     <li class="my-1"><a href="motosiklet_turleri.php" style="text-decoration: none; color:#fff">Motosiklet Türleri</a></li>
-                                    <li><a href="marka-model.php" style="text-decoration: none; color:#fff">Marka/Model</a></li>
+                                    <li><a href="marka.php" style="text-decoration: none; color:#fff">Motosiklet Markaları</a></li>
+                                    <li><a href="marka-model.php" style="text-decoration: none; color:#fff">Motosiklet Marka-Modelleri</a></li>
                                 </ol>
                             </div>
                         </div>

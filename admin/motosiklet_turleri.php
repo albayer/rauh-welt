@@ -51,9 +51,9 @@ if (isset($_GET['turDeleteID'])) {
                             </select>
                             <input type="text" name="kullanimAlani" placeholder="Kullanım Alanı" class="form-control">
                             <!-- CK Editor Start -->
-                            <textarea name="aciklama" id="aciklama" placeholder="Tür Açıklaması" class="form-control" required></textarea>
+                            <textarea name="aciklama" id="aciklama" placeholder="Tür Açıklaması" class="form-control my-3" required></textarea>
                             <!-- CK Editor End -->
-                            <input type="file" name="gorsel" class="form-control my-3" required>
+                            <input type="file" name="gorsel" class="form-control mb-3" required>
                             <input type="submit" value="Kaydet" class="btn btn-success w-100" name="kaydet">
                         </form>
                     </div>

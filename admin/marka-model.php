@@ -116,7 +116,18 @@
                                     <input type="text" name="dolu_kutle" placeholder="Dolu Ağırlığını Girin" class="form-control" required>
                                 </div>
                             </div>
-                            <input type="text" name="koltuk_yukseklik" placeholder="Koltuk Yüksekliğini Girin" class="form-control my-3" required>
+                            <div class="row my-3">
+                                <div class="col-md-6">
+                                    <input type="text" name="koltuk_yukseklik" placeholder="Koltuk Yüksekliğini Girin" class="form-control my-3" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="durum">
+                                        <option value="">Seçiniz</option>
+                                        <option value="Aktif">Aktif</option>
+                                        <option value="Pasif">Pasif</option>
+                                    </select>
+                                </div>
+                            </div>
                             <textarea name="aciklama" id="aciklama" placeholder="Açıklama Girin" class="form-control" required></textarea>
                             <input type="file" name="gorsel" class="form-control my-3" required>
                             <input type="submit" value="Kaydet" class="btn btn-success w-100" name="kaydet">
@@ -129,8 +140,8 @@
         if (isset($_POST['kaydet'])) {
             $gorsel = '../assets/img/' . $_FILES['gorsel']['name'];
             if (move_uploaded_file($_FILES['gorsel']['tmp_name'], $gorsel)) {
-                $modelEkle = $db->prepare('insert into marka_model(marka,model,cc,silindir,kw,motor_tipi,tur,model_yili,yakit_kapasitesi,yakit_tuketimi,lastik_on,lastik_arka,bos_kutle,dolu_kutle,koltuk_yukseklik,aciklama,gorsel) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
-                $modelEkle->execute(array($_POST['marka'], $_POST['model'], $_POST['cc'], $_POST['silindir'], $_POST['kw'], $_POST['motor_tipi'], $_POST['tur'], $_POST['model_yili'], $_POST['yakit_kapasitesi'], $_POST['yakit_tuketimi'], $_POST['lastik_on'], $_POST['lastik_arka'], $_POST['bos_kutle'], $_POST['dolu_kutle'], $_POST['koltuk_yukseklik'], $_POST['aciklama'], $gorsel));
+                $modelEkle = $db->prepare('insert into marka_model(marka,model,cc,silindir,kw,motor_tipi,tur,model_yili,yakit_kapasitesi,yakit_tuketimi,lastik_on,lastik_arka,bos_kutle,dolu_kutle,koltuk_yukseklik,durum,aciklama,gorsel) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+                $modelEkle->execute(array($_POST['marka'], $_POST['model'], $_POST['cc'], $_POST['silindir'], $_POST['kw'], $_POST['motor_tipi'], $_POST['tur'], $_POST['model_yili'], $_POST['yakit_kapasitesi'], $_POST['yakit_tuketimi'], $_POST['lastik_on'], $_POST['lastik_arka'], $_POST['bos_kutle'], $_POST['dolu_kutle'], $_POST['koltuk_yukseklik'],$_POST['durum'], $_POST['aciklama'], $gorsel));
                 if ($modelEkle->rowCount()) {
                     echo '<script>alert("Kayıt işlemi başarılı")</script><meta http-equiv="refresh" content="0; url=marka-model.php">';
                 } else {
@@ -153,15 +164,8 @@
                     <th>Motor Tipi</th>
                     <th>Türü</th>
                     <th>Yıl</th>
-                    <th>Yakıt Kapasitesi</th>
-                    <th>Yakıt Tüketimi</th>
-                    <th>Lastik Ön</th>
-                    <th>Lastik Arka</th>
-                    <th>Boş Ağırlık</th>
-                    <th>Dolu Ağırlık</th>
-                    <th>Koltuk Yüksekliği</th>
-                    <th>Açıklama</th>
-                    <th>Düzenle</th>
+                    <th>Durum</th>
+                    <th>Teknik Özellikler</th>
                     <th>Sil</th>
                 </tr>
             </thead>
@@ -171,27 +175,20 @@
                 $modelList->execute();
                 foreach ($modelList as  $modelListAll) {
                 ?>
-                <tr>
-                    <td><img src="<?php echo $modelListAll['gorsel']; ?>" alt="" class="w-100"></td>
-                    <td><?php echo $modelListAll['marka']; ?></td>
-                    <td><?php echo $modelListAll['model']; ?></td>
-                    <td><?php echo $modelListAll['cc']; ?></td>
-                    <td><?php echo $modelListAll['silindir']; ?></td>
-                    <td><?php echo $modelListAll['kw']; ?></td>
-                    <td><?php echo $modelListAll['motor_tipi']; ?></td>
-                    <td><?php echo $modelListAll['tur']; ?></td>
-                    <td><?php echo $modelListAll['model_yili']; ?></td>
-                    <td><?php echo $modelListAll['yakit_kapasitesi']; ?></td>
-                    <td><?php echo $modelListAll['yakit_tuketimi']; ?></td>
-                    <td><?php echo $modelListAll['lastik_on']; ?></td>
-                    <td><?php echo $modelListAll['lastik_arka']; ?></td>
-                    <td><?php echo $modelListAll['bos_kutle']; ?></td>
-                    <td><?php echo $modelListAll['dolu_kutle']; ?></td>
-                    <td><?php echo $modelListAll['koltuk_yukseklik']; ?></td>
-                    <td><?php echo $modelListAll['aciklama']; ?></td>
-                    <td><a href=""><button class="btn btn-warning">Düzenle</button></a></td>
-                    <td><a href=""><button class="btn btn-danger">Sil</button></a></td>
-                </tr>
+                    <tr>
+                        <td><img src="<?php echo $modelListAll['gorsel']; ?>" alt="" class="w-100"></td>
+                        <td><?php echo $modelListAll['marka']; ?></td>
+                        <td><?php echo $modelListAll['model']; ?></td>
+                        <td><?php echo $modelListAll['cc']; ?></td>
+                        <td><?php echo $modelListAll['silindir']; ?></td>
+                        <td><?php echo $modelListAll['kw']; ?></td>
+                        <td><?php echo $modelListAll['motor_tipi']; ?></td>
+                        <td><?php echo $modelListAll['tur']; ?></td>
+                        <td><?php echo $modelListAll['model_yili']; ?></td>
+                        <td><?php echo $modelListAll['durum']; ?></td>
+                        <td><a href=""><button class="btn btn-warning">Teknik Özellikler</button></a></td>
+                        <td><a href=""><button class="btn btn-danger">Sil</button></a></td>
+                    </tr>
 
                 <?php
                 }

@@ -121,7 +121,7 @@
                                     <input type="text" name="koltuk_yukseklik" placeholder="Koltuk Yüksekliğini Girin" class="form-control my-3" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <select name="durum">
+                                    <select name="durum" class="form-control">
                                         <option value="">Seçiniz</option>
                                         <option value="Aktif">Aktif</option>
                                         <option value="Pasif">Pasif</option>
@@ -186,8 +186,8 @@
                         <td><?php echo $modelListAll['tur']; ?></td>
                         <td><?php echo $modelListAll['model_yili']; ?></td>
                         <td><?php echo $modelListAll['durum']; ?></td>
-                        <td><a href=""><button class="btn btn-warning">Teknik Özellikler</button></a></td>
-                        <td><a href=""><button class="btn btn-danger">Sil</button></a></td>
+                        <td><a href="teknik-detay.php?teknikID=<?php echo $modelListAll['id']; ?>"><button class="btn btn-warning">Teknik Özellikler</button></a></td>
+                        <td><a href="marka-model.php?deleteID=<?php echo $modelListAll['id']; ?>"><button class="btn btn-danger">Sil</button></a></td>
                     </tr>
 
                 <?php

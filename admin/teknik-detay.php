@@ -21,59 +21,67 @@ if (isset($_GET['teknikID'])) {
 <div class="row">
     <div class="row my-2">
         <div class="col-md-6">
-            <h3>Teknik Özellikler</h3>
+            <h3><?php echo $teknikFetch['model']; ?> Teknik Özellikler</h3>
         </div>
         <div class="col-md-6 text-end">
             <a href="teknik-detay.php?updateID=<?php echo $teknikFetch['id']; ?>"><button class="btn btn-warning">Düzenle</button></a>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <div class="card">
-            <img src="<?php echo $teknikFetch['gorsel']; ?>" alt="" class="w-100 rounded">
+            <img src="<?php echo $teknikFetch['gorsel']; ?>" alt="" class="img-fluid w-100 rounded">
             <div class="card-body">
                 <?php echo $teknikFetch['aciklama']; ?>
             </div>
         </div>
     </div>
 
-    <div class="col-md-4">
-        <b class="fs-6">Marka</b>:<?php echo $teknikFetch['marka']; ?>
+
+    <div class="col-md-4" style="margin-top:63px;">
+        <b class="fs-6">Marka</b>: <?php echo $teknikFetch['marka']; ?>
         <hr>
-        <b class="fs-6">Model</b>:<?php echo $teknikFetch['model']; ?>
+        <b class="fs-6">Hacim</b>: <?php echo $teknikFetch['cc']; ?>
         <hr>
-        <b class="fs-6">Hacim</b>:<?php echo $teknikFetch['cc']; ?>
+        <b class="fs-6">Maksimum Güç</b>: <?php echo $teknikFetch['kw']; ?>
         <hr>
-        <b class="fs-6">Silindir</b>:<?php echo $teknikFetch['silindir']; ?>
+        <b class="fs-6">Motor Tipi</b>: <?php echo $teknikFetch['motor_tipi']; ?>
         <hr>
-        <b class="fs-6">Maksimum Güç</b>:<?php echo $teknikFetch['kw']; ?>
+        <b class="fs-6">Yakıt Kapasitesi</b>: <?php echo $teknikFetch['yakit_kapasitesi']; ?>
         <hr>
-        <b class="fs-6">Motor Tipi</b>:<?php echo $teknikFetch['motor_tipi']; ?>
+        <b class="fs-6">Lastik Ön</b>: <?php echo $teknikFetch['lastik_on']; ?>
         <hr>
-        <b class="fs-6">Boş Kütle</b>:<?php echo $teknikFetch['bos_kutle']; ?>
+        <b class="fs-6">Boş Kütle</b>: <?php echo $teknikFetch['bos_kutle']; ?>
         <hr>
-        <b class="fs-6">Koltuk Yükseklik</b>:<?php echo $teknikFetch['koltuk_yukseklik']; ?>
+        <b class="fs-6">Koltuk Yükseklik</b>: <?php echo $teknikFetch['koltuk_yukseklik']; ?>
         <hr>
     </div>
     <div class="col-md-4">
-        <select name="" class="form-control mb-3 mt-0">
+        <select name="" class="form-control mb-4">
             <option value="<?php echo $teknikFetch['durum']; ?>"><?php echo $teknikFetch['durum']; ?></option>
             <option value="Aktif">Aktif</option>
             <option value="Pasif">Pasif</option>
         </select>
-        <b class="fs-6">Motor Türü</b>:<?php echo $teknikFetch['tur']; ?>
+        <b class="fs-6">Model</b>: <?php echo $teknikFetch['model']; ?>
         <hr>
-        <b class="fs-6">Model Yılı</b>:<?php echo $teknikFetch['model_yili']; ?>
+        <b class="fs-6">Silindir Sayısı</b>: <?php echo $teknikFetch['silindir']; ?>
         <hr>
-        <b class="fs-6">Yakıt Kapasitesi</b>:<?php echo $teknikFetch['yakit_kapasitesi']; ?>
+        <b class="fs-6">Maksimum Tork</b>: <?php echo $teknikFetch['tork']; ?>
         <hr>
-        <b class="fs-6">Yakıt Tüketimi</b>:<?php echo $teknikFetch['yakit_tuketimi']; ?>
+        <b class="fs-6">Model Yılı</b>: <?php echo $teknikFetch['model_yili']; ?>
         <hr>
-        <b class="fs-6">Lastik Ön</b>:<?php echo $teknikFetch['lastik_on']; ?>
+        <b class="fs-6">Yakıt Tüketimi</b>: <?php echo $teknikFetch['yakit_tuketimi']; ?>
         <hr>
-        <b class="fs-6">Lastik Arka</b>:<?php echo $teknikFetch['lastik_arka']; ?>
+        <b class="fs-6">Lastik Arka</b>: <?php echo $teknikFetch['lastik_arka']; ?>
         <hr>
-        <b class="fs-6">Dolu Kütle</b>:<?php echo $teknikFetch['dolu_kutle']; ?>
+        <b class="fs-6">Dolu Kütle</b>: <?php echo $teknikFetch['dolu_kutle']; ?>
         <hr>
+        <b class="fs-6">Motor Türü</b>: <?php echo $teknikFetch['tur']; ?>
+        <hr>
+
+
+
+
+
     </div>
     <div class="col-12">
 

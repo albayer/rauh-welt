@@ -51,14 +51,19 @@
                                 </div>
                             </div>
                             <div class="row my-3">
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <input type="text" name="cc" placeholder="Motor Hacmini Girin" class="form-control" required>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <input type="text" name="silindir" placeholder="Silindir Sayısı Girin" class="form-control" required>
                                 </div>
-                                <div class="col-md-4">
-                                    <input type="text" name="kw" placeholder="kW Girin(Örn: 75 kW)" class="form-control" required>
+                            </div>
+                            <div class="row my-3">
+                                <div class="col-md-6">
+                                    <input type="text" name="kw" placeholder="Maks. kW Girin(Örn: 75 kW)" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="tork" placeholder="Maks. Tork Girin(Örn: 75 nM)" class="form-control" required>
                                 </div>
                             </div>
                             <div class="row my-3">
@@ -118,7 +123,7 @@
                             </div>
                             <div class="row my-3">
                                 <div class="col-md-6">
-                                    <input type="text" name="koltuk_yukseklik" placeholder="Koltuk Yüksekliğini Girin" class="form-control my-3" required>
+                                    <input type="text" name="koltuk_yukseklik" placeholder="Koltuk Yüksekliğini Girin" class="form-control" required>
                                 </div>
                                 <div class="col-md-6">
                                     <select name="durum" class="form-control">
@@ -140,8 +145,8 @@
         if (isset($_POST['kaydet'])) {
             $gorsel = '../assets/img/' . $_FILES['gorsel']['name'];
             if (move_uploaded_file($_FILES['gorsel']['tmp_name'], $gorsel)) {
-                $modelEkle = $db->prepare('insert into marka_model(marka,model,cc,silindir,kw,motor_tipi,tur,model_yili,yakit_kapasitesi,yakit_tuketimi,lastik_on,lastik_arka,bos_kutle,dolu_kutle,koltuk_yukseklik,durum,aciklama,gorsel) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
-                $modelEkle->execute(array($_POST['marka'], $_POST['model'], $_POST['cc'], $_POST['silindir'], $_POST['kw'], $_POST['motor_tipi'], $_POST['tur'], $_POST['model_yili'], $_POST['yakit_kapasitesi'], $_POST['yakit_tuketimi'], $_POST['lastik_on'], $_POST['lastik_arka'], $_POST['bos_kutle'], $_POST['dolu_kutle'], $_POST['koltuk_yukseklik'],$_POST['durum'], $_POST['aciklama'], $gorsel));
+                $modelEkle = $db->prepare('insert into marka_model(marka,model,cc,silindir,kw,tork,motor_tipi,tur,model_yili,yakit_kapasitesi,yakit_tuketimi,lastik_on,lastik_arka,bos_kutle,dolu_kutle,koltuk_yukseklik,durum,aciklama,gorsel) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+                $modelEkle->execute(array($_POST['marka'], $_POST['model'], $_POST['cc'], $_POST['silindir'], $_POST['kw'], $_POST['tork'], $_POST['motor_tipi'], $_POST['tur'], $_POST['model_yili'], $_POST['yakit_kapasitesi'], $_POST['yakit_tuketimi'], $_POST['lastik_on'], $_POST['lastik_arka'], $_POST['bos_kutle'], $_POST['dolu_kutle'], $_POST['koltuk_yukseklik'], $_POST['durum'], $_POST['aciklama'], $gorsel));
                 if ($modelEkle->rowCount()) {
                     echo '<script>alert("Kayıt işlemi başarılı")</script><meta http-equiv="refresh" content="0; url=marka-model.php">';
                 } else {
@@ -159,9 +164,7 @@
                     <th>Marka</th>
                     <th>Model</th>
                     <th>Hacim</th>
-                    <th>Silindir</th>
-                    <th>kW</th>
-                    <th>Motor Tipi</th>
+                    <th>Silindir Sayısı</th>
                     <th>Türü</th>
                     <th>Yıl</th>
                     <th>Durum</th>
@@ -181,8 +184,6 @@
                         <td><?php echo $modelListAll['model']; ?></td>
                         <td><?php echo $modelListAll['cc']; ?></td>
                         <td><?php echo $modelListAll['silindir']; ?></td>
-                        <td><?php echo $modelListAll['kw']; ?></td>
-                        <td><?php echo $modelListAll['motor_tipi']; ?></td>
                         <td><?php echo $modelListAll['tur']; ?></td>
                         <td><?php echo $modelListAll['model_yili']; ?></td>
                         <td><?php echo $modelListAll['durum']; ?></td>

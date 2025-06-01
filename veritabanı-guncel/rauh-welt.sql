@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1:3306
--- Üretim Zamanı: 28 May 2025, 18:40:58
--- Sunucu sürümü: 8.2.0
--- PHP Sürümü: 8.2.13
+-- Üretim Zamanı: 01 Haz 2025, 22:33:26
+-- Sunucu sürümü: 9.1.0
+-- PHP Sürümü: 8.3.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -59,7 +59,8 @@ CREATE TABLE IF NOT EXISTS `marka_model` (
   `model` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `cc` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `silindir` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `kw` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `kw` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `tork` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
   `motor_tipi` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `tur` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `model_yili` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
@@ -70,21 +71,22 @@ CREATE TABLE IF NOT EXISTS `marka_model` (
   `bos_kutle` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `dolu_kutle` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `koltuk_yukseklik` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `durum` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `durum` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `aciklama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `gorsel` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Tablo döküm verisi `marka_model`
 --
 
-INSERT INTO `marka_model` (`id`, `marka`, `model`, `cc`, `silindir`, `kw`, `motor_tipi`, `tur`, `model_yili`, `yakit_kapasitesi`, `yakit_tuketimi`, `lastik_on`, `lastik_arka`, `bos_kutle`, `dolu_kutle`, `koltuk_yukseklik`, `durum`, `aciklama`, `gorsel`) VALUES
-(1, 'Kawasaki', 'ZX10RR', '998 cm³', '4', '154,5 kW', 'Sıvı soğutmalı, 4 zamanlı, sıralı dört', 'Sport Motosikletler', '2025', '17,0 lt', '6,1 l/100 km', '120/70 ZR17 M/C (58W)', '190/55 ZR17 M/C (75W)', '207 kg', '227 kg', '835mm', 'Aktif', 'Tüm rakiplerinizi yenebilirsiniz, ancak her zaman yüzleşmeniz gereken bir zorluk vardır: kendi içinizde. Sizin gibi her zorluğun üstesinden gelenler için gerçek bir şampiyonun hak ettiği motosikleti geliştirdik. Yeni Ninja ZX-10R ve Ninja ZX-10RR kazanmak için gereken her şeye sahip: entegre kanatçıklara sahip tamamen yeni aerodinamik gövde, küçük ve hafif LED farlar, TFT renkli göstergeler ve Akıllı Telefon bağlantısının yanı sıra Kawasaki Racing Team World Superbike uzmanlığından elde edilen güncellemeler. Artık yarış odaklı kusursuz bir Ninja\'ya sahip olduğunuza göre, Kendinizle Yüzleşin.', '../assets/img/supersports-motosiklet.webp'),
-(2, 'Kawasaki', 'NINJA ZX-4RR', '399 cm³', '4', '58,7 kW', 'Sıvı soğutmalı, 4 zamanlı, sıralı dört', 'Sport Motosikletler', '2025', '15,0 litre', '5,1 l/100km', '120/70 ZR17 M/C (58W)', '160/60 ZR17 M/C (69W)', '189 kilo', '207 kilo', '800 mm', 'Aktif', '400cc spor modellerle dolu bir kategoriye Kawasaki, devrim niteliğindeki Supersport modelini tanıtıyor. Ninja ZX-4RR, kompakt bir şaside sınıfında lider performansa sahip 400cc Sıralı Dört motora sahiptir. Pistte veya sokakta, Ninja ZX-4RR\'nin benzeri görülmemiş gücünün, heyecan verici yüksek devirli çığlığının ve keskin, çevik kullanımının coşkusunu deneyimlemek, içinizdeki uyuyan Supersport\'u kesinlikle uyandıracaktır.', '../assets/img/supersports-motosiklet.webp'),
-(3, 'Kawasaki', 'Z900 SE', '948 cm³', '4', '91,0 kW', 'Sıvı soğutmalı, 4 zamanlı, sıralı dörtlü', 'Naked (Çıplak) Motosikletler', '2025', '17,0 litre', '4,8 l/100km', '120/70 ZR17 M/C (58W)', '180/55 ZR17 M/C (73W)', '214 kg', '235 kg', '830 mm', 'Aktif', 'Bu Z900 SE supernaked, radikal streetfighter tavrını premium özelliklerle eşleştirerek Sugomi\'nin en gelişmiş yinelemesini müjdeliyor. Hiç şüpheniz olmasın, meydan okuyan ruh her zamankinden daha güçlü; Z900 SE rafine tasarımıyla güçlü bir aura yaratıyor ve 948 cc motorun her kükreyişinde duyulara saldırıyor.\r\n\r\n', '../assets/img/naked-motosiklet.webp'),
-(4, 'Kawasaki', 'ELIMINATOR 500', '451 cm³', '2', '42,6 N•m', 'Sıvı soğutmalı, 4 zamanlı, paralel ikiz', 'Cruiser Motosikletler', '2025', '13,0 litre', '3,8 l/100 km', '90/90-21M/C 54R', '150/80-16M/C 71H', '176 kg', '194 kg', '735mm', 'Aktif', 'Sokaklar sizi çağırdığında yepyeni Eliminator 500 ile cevap verin. Bu bisiklet, şık ve alçak tasarımı, alçak ve rahat selesi ve Kawasaki\'nin şimdiye kadarki en ulaşılabilir kruvazörü için hafif ve kolay kullanımıyla alışılagelmişi sarsıyor. Fazla düşünmeyin; zamana meydan okuyan tasarım modern teknolojiyle birleştirildi, böylece Just Ride yapabilirsiniz.', '../assets/img/cruiser-motosiklet.webp');
+INSERT INTO `marka_model` (`id`, `marka`, `model`, `cc`, `silindir`, `kw`, `tork`, `motor_tipi`, `tur`, `model_yili`, `yakit_kapasitesi`, `yakit_tuketimi`, `lastik_on`, `lastik_arka`, `bos_kutle`, `dolu_kutle`, `koltuk_yukseklik`, `durum`, `aciklama`, `gorsel`) VALUES
+(1, 'Kawasaki', 'ZX10RR', '998 cm³', '4', '147,1 kW / 13.600 dev/dak', '111,0 N•m / 11.500 dev/dak', 'Sıvı soğutmalı, 4 zamanlı, sıralı dört', 'Sport Motosikletler', '2025', '17,0 lt', '6,1 l/100 km', '120/70 ZR17 M/C (58W)', '190/55 ZR17 M/C (75W)', '207 kg', '227 kg', '835mm', 'Aktif', 'Tüm rakiplerinizi yenebilirsiniz, ancak her zaman yüzleşmeniz gereken bir zorluk vardır: kendi içinizde. Sizin gibi her zorluğun üstesinden gelenler için gerçek bir şampiyonun hak ettiği motosikleti geliştirdik. Yeni Ninja ZX-10R ve Ninja ZX-10RR kazanmak için gereken her şeye sahip: entegre kanatçıklara sahip tamamen yeni aerodinamik gövde, küçük ve hafif LED farlar, TFT renkli göstergeler ve Akıllı Telefon bağlantısının yanı sıra Kawasaki Racing Team World Superbike uzmanlığından elde edilen güncellemeler. Artık yarış odaklı kusursuz bir Ninja\'ya sahip olduğunuza göre, Kendinizle Yüzleşin.', '../assets/img/supersports-motosiklet.webp'),
+(2, 'Kawasaki', 'NINJA ZX-4RR', '399 cm³', '4', '57,0 kW / 14.500 dev/dak', '39,0 N•m  / 13.000 dev/dak', 'Sıvı soğutmalı, 4 zamanlı, sıralı dört', 'Sport Motosikletler', '2025', '15,0 litre', '5,1 l/100km', '120/70 ZR17 M/C (58W)', '160/60 ZR17 M/C (69W)', '189 kilo', '207 kilo', '800 mm', 'Aktif', '400cc spor modellerle dolu bir kategoriye Kawasaki, devrim niteliğindeki Supersport modelini tanıtıyor. Ninja ZX-4RR, kompakt bir şaside sınıfında lider performansa sahip 400cc Sıralı Dört motora sahiptir. Pistte veya sokakta, Ninja ZX-4RR\'nin benzeri görülmemiş gücünün, heyecan verici yüksek devirli çığlığının ve keskin, çevik kullanımının coşkusunu deneyimlemek, içinizdeki uyuyan Supersport\'u kesinlikle uyandıracaktır.', '../assets/img/supersports-motosiklet.webp'),
+(3, 'Kawasaki', 'Z900 SE', '948 cm³', '4', '91,0 kW  / 9.500 dev/dak', '97,4 N•m  / 7.700 dev/dak', 'Sıvı soğutmalı, 4 zamanlı, sıralı dörtlü', 'Naked (Çıplak) Motosikletler', '2025', '17,0 litre', '4,8 l/100km', '120/70 ZR17 M/C (58W)', '180/55 ZR17 M/C (73W)', '214 kg', '235 kg', '830 mm', 'Aktif', 'Bu Z900 SE supernaked, radikal streetfighter tavrını premium özelliklerle eşleştirerek Sugomi\'nin en gelişmiş yinelemesini müjdeliyor. Hiç şüpheniz olmasın, meydan okuyan ruh her zamankinden daha güçlü; Z900 SE rafine tasarımıyla güçlü bir aura yaratıyor ve 948 cc motorun her kükreyişinde duyulara saldırıyor.\r\n\r\n', '../assets/img/naked-motosiklet.webp'),
+(4, 'Kawasaki', 'ELIMINATOR 500', '451 cm³', '2', '33,4 kW / 9.000 dev/dak', '42,6 N•m  / 6.000 dev/dak', 'Sıvı soğutmalı, 4 zamanlı, paralel ikiz', 'Cruiser Motosikletler', '2025', '13,0 litre', '3,8 l/100 km', '90/90-21M/C 54R', '150/80-16M/C 71H', '176 kg', '194 kg', '735mm', 'Aktif', 'Sokaklar sizi çağırdığında yepyeni Eliminator 500 ile cevap verin. Bu bisiklet, şık ve alçak tasarımı, alçak ve rahat selesi ve Kawasaki\'nin şimdiye kadarki en ulaşılabilir kruvazörü için hafif ve kolay kullanımıyla alışılagelmişi sarsıyor. Fazla düşünmeyin; zamana meydan okuyan tasarım modern teknolojiyle birleştirildi, böylece Just Ride yapabilirsiniz.', '../assets/img/cruiser-motosiklet.webp'),
+(5, 'Kawasaki', 'VERSYS 650', '649 cm³', '2', '49,0 kW / 8.500 dev/dak', '61,0 N•m / 7.000 dev/dak', 'Sıvı soğutmalı, 4 zamanlı, paralel ikiz', 'Adventure (Macera) Motosiketler', '2025', '21,0 litre', '4,4 l/100 km', '120/70 ZR17 M/C (58W)', '160/60 ZR17 M/C (69W)', '219 kg', '243 kg', '845mm', 'Aktif', 'Versys 650, şehrinizi fethetmek veya onu çok geride bırakmak için yaratıldı. Şehir ormanını fethetmek için tasarlanan bu aracın nihai potansiyeli sizi, yolcunuzu ve bagajınızı bir sonraki büyük maceraya taşıyan Tourer+ versiyonunda hayat buluyor. Ayarlanabilir ön cam, Bluetooth bağlantılı renkli TFT Metre, LED aydınlatma ve KTRC çekiş kontrolü gibi yeni özel özellikler her sürüşten keyif almanızı sağlar. Kısa bir ofis gezisi veya hafta sonu kaçamağı, Versys 650\'nin en iyi seyahat rehberiniz olmasına izin verin.', '../assets/img/adventure-motosiklet.webp');
 
 -- --------------------------------------------------------
 

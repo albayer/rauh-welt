@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1:3306
--- Üretim Zamanı: 28 May 2025, 18:40:41
--- Sunucu sürümü: 8.2.0
--- PHP Sürümü: 8.2.13
+-- Üretim Zamanı: 01 Haz 2025, 22:33:53
+-- Sunucu sürümü: 9.1.0
+-- PHP Sürümü: 8.3.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `hizmetler`;
 CREATE TABLE IF NOT EXISTS `hizmetler` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `baslik` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
-  `aciklama` text COLLATE utf8mb4_general_ci NOT NULL,
-  `gorsel` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `baslik` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `aciklama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `gorsel` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -55,10 +55,10 @@ INSERT INTO `hizmetler` (`id`, `baslik`, `aciklama`, `gorsel`) VALUES
 DROP TABLE IF EXISTS `kategoriler`;
 CREATE TABLE IF NOT EXISTS `kategoriler` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `katAdi` varchar(25) COLLATE utf8mb4_general_ci NOT NULL,
-  `katTuru` varchar(25) COLLATE utf8mb4_general_ci NOT NULL,
-  `ustKat` varchar(25) COLLATE utf8mb4_general_ci NOT NULL,
-  `aciklama` text COLLATE utf8mb4_general_ci NOT NULL,
+  `katAdi` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `katTuru` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `ustKat` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `aciklama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -83,12 +83,12 @@ INSERT INTO `kategoriler` (`id`, `katAdi`, `katTuru`, `ustKat`, `aciklama`) VALU
 DROP TABLE IF EXISTS `mesajlar`;
 CREATE TABLE IF NOT EXISTS `mesajlar` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `isim` varchar(25) COLLATE utf8mb4_general_ci NOT NULL,
-  `soyisim` varchar(25) COLLATE utf8mb4_general_ci NOT NULL,
-  `eposta` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `konu` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `isim` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `soyisim` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `eposta` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `konu` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `mesaj` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `durum` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
+  `durum` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -110,14 +110,14 @@ INSERT INTO `mesajlar` (`id`, `isim`, `soyisim`, `eposta`, `konu`, `mesaj`, `dur
 DROP TABLE IF EXISTS `portfolyo`;
 CREATE TABLE IF NOT EXISTS `portfolyo` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `projeAdi` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `aciklama` text COLLATE utf8mb4_general_ci NOT NULL,
-  `kurum` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
-  `projeturu` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
-  `hizmet` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
-  `teknoloji` varchar(75) COLLATE utf8mb4_general_ci NOT NULL,
-  `adres` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `gorsel` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `projeAdi` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `aciklama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `kurum` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `projeturu` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `hizmet` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `teknoloji` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `adres` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `gorsel` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -145,11 +145,11 @@ INSERT INTO `portfolyo` (`id`, `projeAdi`, `aciklama`, `kurum`, `projeturu`, `hi
 DROP TABLE IF EXISTS `reklam_talep`;
 CREATE TABLE IF NOT EXISTS `reklam_talep` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `isim` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
-  `telefon` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
-  `eposta` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `adres` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `gorsel` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `isim` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `telefon` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `eposta` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `adres` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `gorsel` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `durum` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -172,13 +172,13 @@ INSERT INTO `reklam_talep` (`id`, `isim`, `telefon`, `eposta`, `adres`, `gorsel`
 DROP TABLE IF EXISTS `yazilar`;
 CREATE TABLE IF NOT EXISTS `yazilar` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `baslik` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
-  `aciklama` text COLLATE utf8mb4_general_ci NOT NULL,
-  `meta` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
-  `durum` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
-  `tarih` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
-  `kategori` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `gorsel` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `baslik` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `aciklama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `meta` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `durum` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `tarih` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `kategori` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `gorsel` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -207,12 +207,12 @@ INSERT INTO `yazilar` (`id`, `baslik`, `aciklama`, `meta`, `durum`, `tarih`, `ka
 DROP TABLE IF EXISTS `yorumlar`;
 CREATE TABLE IF NOT EXISTS `yorumlar` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `isim` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `eposta` varchar(75) COLLATE utf8mb4_general_ci NOT NULL,
-  `yorum` text COLLATE utf8mb4_general_ci NOT NULL,
-  `yaziID` varchar(5) COLLATE utf8mb4_general_ci NOT NULL,
-  `baslik` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
-  `durum` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
+  `isim` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `eposta` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `yorum` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `yaziID` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `baslik` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `durum` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

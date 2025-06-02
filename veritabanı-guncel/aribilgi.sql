@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1:3306
--- Üretim Zamanı: 01 Haz 2025, 22:33:53
+-- Üretim Zamanı: 02 Haz 2025, 18:33:05
 -- Sunucu sürümü: 9.1.0
 -- PHP Sürümü: 8.3.14
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Veritabanı: `aribilgi`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `hakkimizda`
+--
+
+DROP TABLE IF EXISTS `hakkimizda`;
+CREATE TABLE IF NOT EXISTS `hakkimizda` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `baslik` varchar(20) COLLATE utf8mb4_general_ci NOT NULL,
+  `aciklama` text COLLATE utf8mb4_general_ci NOT NULL,
+  `metaDesc` text COLLATE utf8mb4_general_ci NOT NULL,
+  `gorsel` text COLLATE utf8mb4_general_ci NOT NULL,
+  `alt` text COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tablo döküm verisi `hakkimizda`
+--
+
+INSERT INTO `hakkimizda` (`id`, `baslik`, `aciklama`, `metaDesc`, `gorsel`, `alt`) VALUES
+(1, 'asdasdasd', '<p>asdadsasdasd</p>', 'asdadsasd', '../assets/img/foto3.jpg', 'asdadsads');
 
 -- --------------------------------------------------------
 
@@ -90,16 +114,16 @@ CREATE TABLE IF NOT EXISTS `mesajlar` (
   `mesaj` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `durum` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Tablo döküm verisi `mesajlar`
 --
 
 INSERT INTO `mesajlar` (`id`, `isim`, `soyisim`, `eposta`, `konu`, `mesaj`, `durum`) VALUES
-(1, 'Alperen', 'Bayer', 'alperen@hotmail.com', 'Deneme Mesajı', 'Deneme Mesajı İçeriği', 'Okunmadı'),
-(2, 'Hayko', 'Cepkin', 'hayko@cepkin.com', 'Web Sitesi Hakkında', 'Fiyatlandırmanızı paylaşabilir misiniz?', 'Okunmadı'),
-(3, 'Yıldız', 'Tilbe', 'yildiz@tilbe.com', 'Yıldız Deneme', 'Deneme Yıldız YazısıLorem, ipsum dolor sit amet consectetur adipisicing elit. Qui eos porro odio laboriosam! Temporibus modi repellat delectus quo a cum cumque error quisquam? Eaque, esse odit aperiam atque numquam delectus, eum quis non veritatis quia, deserunt tenetur? Accusamus harum voluptate quos magnam voluptatibus? Amet at consequatur molestias porro saepe culpa eum excepturi voluptatibus ab eaque alias reiciendis atque commodi est libero tempora, eligendi, repellat perferendis cum optio voluptatum hic dolorum. Maiores eveniet libero perferendis nisi adipisci recusandae aliquam eos obcaecati? Ex fugiat itaque et iure beatae ducimus deserunt provident vel at optio autem, aspernatur veniam quaerat! Animi quae quam cumque, asperiores, sunt blanditiis sed rem temporibus, vel provident voluptates quis nisi deserunt totam est repellendus accusamus magni voluptatum perferendis! Soluta sapiente dolorem est dolores sunt. Id dolore magni alias quidem obcaecati ab explicabo totam molestias placeat mollitia soluta eligendi distinctio, voluptates quisquam provident delectus blanditiis quos voluptas quae. Architecto, error!', 'Okunmadı');
+(1, 'Alperen', 'Bayer', 'alperen@hotmail.com', 'Deneme Mesajı', 'Deneme Mesajı İçeriği', 'Okundu'),
+(2, 'Hayko', 'Cepkin', 'hayko@cepkin.com', 'Web Sitesi Hakkında', 'Fiyatlandırmanızı paylaşabilir misiniz?', 'Okundu'),
+(3, 'Yıldız', 'Tilbe', 'yildiz@tilbe.com', 'Yıldız Deneme', 'Deneme Yıldız YazısıLorem, ipsum dolor sit amet consectetur adipisicing elit. Qui eos porro odio laboriosam! Temporibus modi repellat delectus quo a cum cumque error quisquam? Eaque, esse odit aperiam atque numquam delectus, eum quis non veritatis quia, deserunt tenetur? Accusamus harum voluptate quos magnam voluptatibus? Amet at consequatur molestias porro saepe culpa eum excepturi voluptatibus ab eaque alias reiciendis atque commodi est libero tempora, eligendi, repellat perferendis cum optio voluptatum hic dolorum. Maiores eveniet libero perferendis nisi adipisci recusandae aliquam eos obcaecati? Ex fugiat itaque et iure beatae ducimus deserunt provident vel at optio autem, aspernatur veniam quaerat! Animi quae quam cumque, asperiores, sunt blanditiis sed rem temporibus, vel provident voluptates quis nisi deserunt totam est repellendus accusamus magni voluptatum perferendis! Soluta sapiente dolorem est dolores sunt. Id dolore magni alias quidem obcaecati ab explicabo totam molestias placeat mollitia soluta eligendi distinctio, voluptates quisquam provident delectus blanditiis quos voluptas quae. Architecto, error!', 'Okundu');
 
 -- --------------------------------------------------------
 

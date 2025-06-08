@@ -24,7 +24,7 @@ if (isset($_GET['teknikID'])) {
             <h3><?php echo $teknikFetch['model']; ?> Teknik Özellikler</h3>
         </div>
         <div class="col-md-6 text-end">
-            <a href="teknik-detay.php?updateID=<?php echo $teknikFetch['id']; ?>"><button class="btn btn-warning">Düzenle</button></a>
+            <a href="teknik-detay-guncelleme.php?updateID=<?php echo $teknikFetch['id']; ?>"><button class="btn btn-warning">Düzenle</button></a>
         </div>
     </div>
     <div class="col-md-3">
@@ -35,8 +35,6 @@ if (isset($_GET['teknikID'])) {
             </div>
         </div>
     </div>
-
-
     <div class="col-md-4" style="margin-top:63px;">
         <b class="fs-6">Marka</b>: <?php echo $teknikFetch['marka']; ?>
         <hr>
@@ -56,11 +54,9 @@ if (isset($_GET['teknikID'])) {
         <hr>
     </div>
     <div class="col-md-4">
-        <select name="" class="form-control mb-4">
-            <option value="<?php echo $teknikFetch['durum']; ?>"><?php echo $teknikFetch['durum']; ?></option>
-            <option value="Aktif">Aktif</option>
-            <option value="Pasif">Pasif</option>
-        </select>
+        <div style="margin-bottom: 22px;"><b class="fs-6">Durum</b>: <?php echo $teknikFetch['durum']; ?>
+            <hr>
+        </div>
         <b class="fs-6">Model</b>: <?php echo $teknikFetch['model']; ?>
         <hr>
         <b class="fs-6">Silindir Sayısı</b>: <?php echo $teknikFetch['silindir']; ?>
@@ -77,11 +73,6 @@ if (isset($_GET['teknikID'])) {
         <hr>
         <b class="fs-6">Motor Türü</b>: <?php echo $teknikFetch['tur']; ?>
         <hr>
-
-
-
-
-
     </div>
     <div class="col-12">
 

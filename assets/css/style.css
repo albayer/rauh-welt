@@ -6,6 +6,12 @@
     text-decoration: none !important;
 }
 
+.flex {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
 body {
     background-color: #f8f9fa;
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1:3306
--- Üretim Zamanı: 11 Haz 2025, 18:53:26
+-- Üretim Zamanı: 16 Haz 2025, 18:32:36
 -- Sunucu sürümü: 9.1.0
 -- PHP Sürümü: 8.3.14
 
@@ -20,6 +20,50 @@ SET time_zone = "+00:00";
 --
 -- Veritabanı: `aribilgi`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `anasayfa`
+--
+
+DROP TABLE IF EXISTS `anasayfa`;
+CREATE TABLE IF NOT EXISTS `anasayfa` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `baslik` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
+  `aciklama` text COLLATE utf8mb4_general_ci NOT NULL,
+  `video` varchar(75) COLLATE utf8mb4_general_ci NOT NULL,
+  `gorsel` varchar(75) COLLATE utf8mb4_general_ci NOT NULL,
+  `paketAdi1` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
+  `fiyat1` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `paket1ozellik1` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `paket1ozellik2` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `paket1ozellik3` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `paket1ozellik4` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `paket1ozellik5` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `paketAdi2` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
+  `fiyat2` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `paket2ozellik1` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `paket2ozellik2` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `paket2ozellik3` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `paket2ozellik4` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `paket2ozellik5` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `paketAdi3` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
+  `fiyat3` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `paket3ozellik1` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `paket3ozellik2` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `paket3ozellik3` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `paket3ozellik4` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `paket3ozellik5` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tablo döküm verisi `anasayfa`
+--
+
+INSERT INTO `anasayfa` (`id`, `baslik`, `aciklama`, `video`, `gorsel`, `paketAdi1`, `fiyat1`, `paket1ozellik1`, `paket1ozellik2`, `paket1ozellik3`, `paket1ozellik4`, `paket1ozellik5`, `paketAdi2`, `fiyat2`, `paket2ozellik1`, `paket2ozellik2`, `paket2ozellik3`, `paket2ozellik4`, `paket2ozellik5`, `paketAdi3`, `fiyat3`, `paket3ozellik1`, `paket3ozellik2`, `paket3ozellik3`, `paket3ozellik4`, `paket3ozellik5`) VALUES
+(1, 'asdads', '<p>asdadsads</p>', 'nyaIWevAjGk', '../assets/img/foto5.jpg', 'Paket 1', '100,00', 'özellikler 111', 'özellikler 21', 'özellikler 31', 'özellikler 41', 'özellikler 41', 'özellikler 41', '500,00', 'özellikler 41', 'özellikler 41', 'özellikler 41', 'özellikler 41', 'özellikler 41', 'Paket 3', '1000,00', 'özellikler 41', 'özellikler 41', 'özellikler 41', 'özellikler 41', 'özellikler 41');
 
 -- --------------------------------------------------------
 
@@ -185,6 +229,37 @@ INSERT INTO `reklam_talep` (`id`, `isim`, `telefon`, `eposta`, `adres`, `gorsel`
 (2, 'Alperen Bayer', '05344506123', 'alperenbayer@gmail.com', 'https://www.alperenbayer.com', './assets/img/avatar-500x500.webp', 'Onaylandı'),
 (3, 'Bayer Alperen', '05555555555', 'alperen-bayer@hotmail.com', 'https://www.bayeralperen.com', './assets/img/foto2.jpg', 'onay'),
 (4, 'deneme1', '05555555555', 'deneme@posta.com', 'https://www.aribilgi.com', './assets/img/foto6.jpg', 'Onaylandı');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `seo`
+--
+
+DROP TABLE IF EXISTS `seo`;
+CREATE TABLE IF NOT EXISTS `seo` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `adres` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tablo döküm verisi `seo`
+--
+
+INSERT INTO `seo` (`id`, `adres`) VALUES
+(1, 'https://www.seobility.net/en/seocheck/https://www.bilkid.com'),
+(2, 'https://www.youtube.com/'),
+(3, 'https://www.youtube.com/'),
+(4, 'https://www.seobility.net/en/seocheck/https://www.youtube.com/'),
+(5, 'https://www.seobility.net/en/seocheck/https://www.youtube.com/'),
+(6, 'https://www.seobility.net/en/seocheck/https://www.acibadem.com'),
+(7, 'https://www.seobility.net/en/seocheck/https://www.youtube.com/'),
+(8, 'https://www.seobility.net/en/seocheck/https://www.acibadem.com'),
+(9, 'freetools.seobility.net/en/seocheck/https://www.alperenbayer.com'),
+(10, 'freetools.seobility.net/en/seocheck/https://www.alperenbayer.com'),
+(11, 'freetools.seobility.net/en/seocheck/https://www.alperenbayer.com'),
+(12, 'freetools.seobility.net/en/seocheck/https://www.alperenbayer.com');
 
 -- --------------------------------------------------------
 

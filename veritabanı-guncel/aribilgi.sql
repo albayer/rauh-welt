@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1:3306
--- Üretim Zamanı: 16 Haz 2025, 18:32:36
+-- Üretim Zamanı: 20 Haz 2025, 14:44:32
 -- Sunucu sürümü: 9.1.0
 -- PHP Sürümü: 8.3.14
 
@@ -63,7 +63,37 @@ CREATE TABLE IF NOT EXISTS `anasayfa` (
 --
 
 INSERT INTO `anasayfa` (`id`, `baslik`, `aciklama`, `video`, `gorsel`, `paketAdi1`, `fiyat1`, `paket1ozellik1`, `paket1ozellik2`, `paket1ozellik3`, `paket1ozellik4`, `paket1ozellik5`, `paketAdi2`, `fiyat2`, `paket2ozellik1`, `paket2ozellik2`, `paket2ozellik3`, `paket2ozellik4`, `paket2ozellik5`, `paketAdi3`, `fiyat3`, `paket3ozellik1`, `paket3ozellik2`, `paket3ozellik3`, `paket3ozellik4`, `paket3ozellik5`) VALUES
-(1, 'asdads', '<p>asdadsads</p>', 'nyaIWevAjGk', '../assets/img/foto5.jpg', 'Paket 1', '100,00', 'özellikler 111', 'özellikler 21', 'özellikler 31', 'özellikler 41', 'özellikler 41', 'özellikler 41', '500,00', 'özellikler 41', 'özellikler 41', 'özellikler 41', 'özellikler 41', 'özellikler 41', 'Paket 3', '1000,00', 'özellikler 41', 'özellikler 41', 'özellikler 41', 'özellikler 41', 'özellikler 41');
+(1, 'asdads', '<p>asdadsads</p>', 'nyaIWevAjGk', '../assets/img/foto5.jpg', 'Paket 1', '100,00 ₺', 'özellikler 111', 'özellikler 21', 'özellikler 31', 'özellikler 41', 'özellikler 41', 'özellikler 41', '500,00 ₺', 'özellikler 41', 'özellikler 41', 'özellikler 41', 'özellikler 41', 'özellikler 41', 'Paket 3', '1000,00 ₺', 'özellikler 41', 'özellikler 41', 'özellikler 41', 'özellikler 41', 'özellikler 41');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `ayarlar`
+--
+
+DROP TABLE IF EXISTS `ayarlar`;
+CREATE TABLE IF NOT EXISTS `ayarlar` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `kisaAciklama` text COLLATE utf8mb4_general_ci NOT NULL,
+  `telefon` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
+  `wp` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
+  `eposta` varchar(75) COLLATE utf8mb4_general_ci NOT NULL,
+  `adres` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `harita` text COLLATE utf8mb4_general_ci NOT NULL,
+  `facebook` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `instagram` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `twitter` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `linkedin` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `logo` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=ARCHIVE AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tablo döküm verisi `ayarlar`
+--
+
+INSERT INTO `ayarlar` (`id`, `kisaAciklama`, `telefon`, `wp`, `eposta`, `adres`, `harita`, `facebook`, `instagram`, `twitter`, `linkedin`, `logo`) VALUES
+(1, 'web sitemle ilgili ayarları buradan yapacağım', '05555555555', '05555555555', 'alperenbayer@gmail.com', 'ESENKENT MAHALLESİ', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.6498189855047!2d29.021149576449375!3d40.98914822060203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab8679bfb3d31%3A0x7d75715e081dfa5c!2sAr%C4%B1%20Bilgi%20Bili%C5%9Fim%20Teknolojileri%20Akademisi%20(Kad%C4%B1k%C3%B6y%20%C5%9Eube)!5e0!3m2!1str!2str!4v1750271019663!5m2!1str!2str\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 'https://www.facebook.com/public/Alperen-Bayer', 'https://www.instagram.com/alperenbayer/', 'https://x.com/alperenbayer', 'https://tr.linkedin.com/in/alperen-bayer-b7a188271', '../assets/img/icon-logo-32x32.png');
 
 -- --------------------------------------------------------
 

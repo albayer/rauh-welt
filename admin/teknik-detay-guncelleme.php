@@ -33,7 +33,7 @@ $guncelleFetch = $guncelle->fetch();
             <div class="flex">
                 <b class="fs-6">Marka</b>:
                 <select name="markaUP" class="form-control">
-                    <option value=""><?php echo $guncelleFetch['marka']; ?></option>
+                    <option value="<?php echo $guncelleFetch['marka']; ?>"><?php echo $guncelleFetch['marka']; ?></option>
                     <?php
                     $markalar = $db->prepare('select * from marka order by marka asc');
                     $markalar->execute();
@@ -103,7 +103,7 @@ $guncelleFetch = $guncelle->fetch();
             <div class="flex">
                 <b class="fs-6">Motor Türü</b>:
                 <select name="turUP" class="form-control">
-                    <option value=""><?php echo $guncelleFetch['tur']; ?></option>
+                    <option value="<?php echo $guncelleFetch['tur']; ?>"><?php echo $guncelleFetch['tur']; ?></option>
                     <?php
                     $tur = $db->prepare('select * from motosiklet_turleri order by tur asc');
                     $tur->execute();

@@ -115,3 +115,7 @@ footer {
     color: #FFF;
     font-size: 12px;
 }
+
+#models .card:hover{
+    box-shadow: 0px 0px 24px black;
+}

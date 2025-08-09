@@ -66,6 +66,12 @@ $guncelleFetch = $guncelle->fetch();
             <div class="flex my-2">
                 <b class="fs-6">Koltuk Yükseklik</b>: <input type="text" name="koltuk_yukseklikUP" value="<?php echo $guncelleFetch['koltuk_yukseklik']; ?>" class="form-control">
             </div>
+            <div class="flex my-2">
+                <b>Alış Fiyatı</b>: <input type="text" name="alisUP" value="<?php echo $guncelleFetch['alis']; ?>" class="form-control">
+            </div>
+            <div class="flex my-2">
+                <b>İskonto Oranı</b>: <input type="text" name="iskontoUP" value="<?php echo $guncelleFetch['iskonto']; ?>" class="form-control">
+            </div>
         </div>
         <div class="col-md-4">
             <div class="flex" style="margin-bottom: 22px;">
@@ -115,7 +121,10 @@ $guncelleFetch = $guncelle->fetch();
                     ?>
                 </select>
             </div>
-            <input type="submit" name="guncelle" value="Güncelle" class="btn btn btn-success w-100 mt-4">
+            <div class="flex my-2">
+                <b>Satış Fiyatı</b>: <input type="text" name="satisUP" value="<?php echo $guncelleFetch['satis']; ?>" class="form-control">
+            </div>
+            <input type="submit" name="guncelle" value="Güncelle" class="btn btn btn-success w-100 mt-5">
         </div>
     </div>
 </form>
@@ -126,8 +135,8 @@ if (isset($_POST['guncelle'])) {
 
     if (move_uploaded_file($_FILES['gorselUP']['tmp_name'], $gorselUP)) {
 
-        $guncelle = $db->prepare('update marka_model set marka=?, model=?, cc=?, silindir=?, kw=?, tork=?, motor_tipi=?, tur=?, model_yili=?, yakit_kapasitesi=?, yakit_tuketimi=?, lastik_on=?, lastik_arka=?, bos_kutle=?, dolu_kutle=?, koltuk_yukseklik=?, durum=?, aciklama=?, gorsel=? where id=?');
-        $guncelle->execute(array($_POST['markaUP'], $_POST['modelUP'], $_POST['ccUP'], $_POST['silindirUP'], $_POST['kwUP'], $_POST['torkUP'], $_POST['motor_tipiUP'], $_POST['turUP'], $_POST['model_yiliUP'], $_POST['yakit_kapasitesiUP'], $_POST['yakit_tuketimiUP'], $_POST['lastik_onUP'], $_POST['lastik_arkaUP'], $_POST['bos_kutleUP'], $_POST['dolu_kutleUP'], $_POST['koltuk_yukseklikUP'], $_POST['durumUP'], $_POST['aciklamaUP'], $gorselUP, $id));
+        $guncelle = $db->prepare('update marka_model set marka=?, model=?, cc=?, silindir=?, kw=?, tork=?, motor_tipi=?, tur=?, model_yili=?, yakit_kapasitesi=?, yakit_tuketimi=?, lastik_on=?, lastik_arka=?, bos_kutle=?, dolu_kutle=?, koltuk_yukseklik=?, durum=?, aciklama=?, alis=?, satis=?, iskonto=?, gorsel=?  where id=?');
+        $guncelle->execute(array($_POST['markaUP'], $_POST['modelUP'], $_POST['ccUP'], $_POST['silindirUP'], $_POST['kwUP'], $_POST['torkUP'], $_POST['motor_tipiUP'], $_POST['turUP'], $_POST['model_yiliUP'], $_POST['yakit_kapasitesiUP'], $_POST['yakit_tuketimiUP'], $_POST['lastik_onUP'], $_POST['lastik_arkaUP'], $_POST['bos_kutleUP'], $_POST['dolu_kutleUP'], $_POST['koltuk_yukseklikUP'], $_POST['durumUP'], $_POST['aciklamaUP'], $_POST['alisUP'], $_POST['satisUP'], $_POST['iskontoUP'], $gorselUP, $id));
 
         if ($guncelle->rowCount()) {
             echo '<script>alert("Özellikler Güncellendi")</script><meta http-equiv="refresh" content="0; url=marka-model.php">';
@@ -135,8 +144,8 @@ if (isset($_POST['guncelle'])) {
             echo '<script>alert("Hata Oluştu")</script><meta http-equiv="refresh" content="0; url=marka-model.php">';
         }
     } else {
-        $guncelle = $db->prepare('update marka_model set marka=?, model=?, cc=?, silindir=?, kw=?, tork=?, motor_tipi=?, tur=?, model_yili=?, yakit_kapasitesi=?, yakit_tuketimi=?, lastik_on=?, lastik_arka=?, bos_kutle=?, dolu_kutle=?, koltuk_yukseklik=?, durum=?, aciklama=? where id=?');
-        $guncelle->execute(array($_POST['markaUP'], $_POST['modelUP'], $_POST['ccUP'], $_POST['silindirUP'], $_POST['kwUP'], $_POST['torkUP'], $_POST['motor_tipiUP'], $_POST['turUP'], $_POST['model_yiliUP'], $_POST['yakit_kapasitesiUP'], $_POST['yakit_tuketimiUP'], $_POST['lastik_onUP'], $_POST['lastik_arkaUP'], $_POST['bos_kutleUP'], $_POST['dolu_kutleUP'], $_POST['koltuk_yukseklikUP'], $_POST['durumUP'], $_POST['aciklamaUP'], $id));
+        $guncelle = $db->prepare('update marka_model set marka=?, model=?, cc=?, silindir=?, kw=?, tork=?, motor_tipi=?, tur=?, model_yili=?, yakit_kapasitesi=?, yakit_tuketimi=?, lastik_on=?, lastik_arka=?, bos_kutle=?, dolu_kutle=?, koltuk_yukseklik=?, durum=?, aciklama=?, alis=?, satis=?, iskonto=?, gorsel=? where id=?');
+        $guncelle->execute(array($_POST['markaUP'], $_POST['modelUP'], $_POST['ccUP'], $_POST['silindirUP'], $_POST['kwUP'], $_POST['torkUP'], $_POST['motor_tipiUP'], $_POST['turUP'], $_POST['model_yiliUP'], $_POST['yakit_kapasitesiUP'], $_POST['yakit_tuketimiUP'], $_POST['lastik_onUP'], $_POST['lastik_arkaUP'], $_POST['bos_kutleUP'], $_POST['dolu_kutleUP'], $_POST['koltuk_yukseklikUP'], $_POST['durumUP'], $_POST['aciklamaUP'], $_POST['alisUP'], $_POST['satisUP'], $_POST['iskontoUP'], $id));
 
         if ($guncelle->rowCount()) {
             echo '<script>alert("Özellikler Güncellendi")</script><meta http-equiv="refresh" content="0; url=marka-model.php">';

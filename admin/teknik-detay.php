@@ -52,6 +52,10 @@ if (isset($_GET['teknikID'])) {
         <hr>
         <b class="fs-6">Koltuk Yükseklik</b>: <?php echo $teknikFetch['koltuk_yukseklik']; ?>
         <hr>
+        <b class="fs-6">Alış Fiyatı</b>: <?php echo $teknikFetch['alis']; ?> TL
+        <hr>
+        <b class="fs-6">İskonto Ortanı (%)</b>: <?php echo $teknikFetch['iskonto']; ?>
+        <hr>
     </div>
     <div class="col-md-4">
         <div style="margin-bottom: 22px;"><b class="fs-6">Durum</b>: <?php echo $teknikFetch['durum']; ?>
@@ -72,6 +76,8 @@ if (isset($_GET['teknikID'])) {
         <b class="fs-6">Dolu Kütle</b>: <?php echo $teknikFetch['dolu_kutle']; ?>
         <hr>
         <b class="fs-6">Motor Türü</b>: <?php echo $teknikFetch['tur']; ?>
+        <hr>
+        <b class="fs-6">Satış Fiyatı</b>: <?php echo $teknikFetch['satis']; ?> TL
         <hr>
     </div>
     <div class="col-12">

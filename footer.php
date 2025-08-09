@@ -57,7 +57,7 @@
                     </div>
                     <div class="col-12 text-center py-4">
                         <p style="color: #8b8b8b;">
-                            <small>Telif Hakkı © 2024 Honda. Tüm hakları saklıdır.</small>
+                            <small>Telif Hakkı © 2024 Rauh Welt. Tüm hakları saklıdır.</small>
                         </p>
                         <a href="index.html">
                             <img src="./assets/img/rauh-welt-logo-450x169.png" alt=" Rauh Welt Logo"

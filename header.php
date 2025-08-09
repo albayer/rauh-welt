@@ -1,3 +1,4 @@
+<?php require_once('./assets/baglan.php'); ?>
 <!DOCTYPE html>
 <html lang="tr">
 

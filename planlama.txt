@@ -8,3 +8,19 @@ Teknik Özellik Gir
 Motor Tipi - Sıkıştırma Oranı - Yakıt Sistemi - Çalıştırma Sistemi - Yağlama - Ateşleme - Maksimum güç - Maksimum tork - Yakıt Tüketimi - Şanzıman - Debriyaj - Şasi Tipi - Lastik, ön - Lastik, arka - U x G x Y - Yerden yükseklik - Yakıt Kapasitesi - Koltuk yüksekliği - Boş kütle
 
 yakıt kapasitesi- yakıt tüketimi - lastik ön ebat - lastik arka ebat - Koltuk yüksekliği - Boş kütle
+
+
+
+
+
+
+---Yapılacaklar---
+
+Anasayfada tamamlanacak.
+    tüm sayfa bitecek.
+    Tıklanan ürünlerin detay sayfasına gidecek.
+Modeller sayfası yapılacak
+    filtre olacak.
+    tüm modeller listelenecek.
+    modele tıklandığında detay sayfasına gidecek.
+    sepete ekle butonu olacak.

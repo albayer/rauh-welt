@@ -135,6 +135,17 @@
                             </div>
                             <textarea name="aciklama" id="aciklama" placeholder="Açıklama Girin" class="form-control" required></textarea>
                             <input type="file" name="gorsel" class="form-control my-3" required>
+                            <div class="row my-3">
+                                <div class="col-md-4">
+                                    <input type="text" name="alis" placeholder="Alış Fiyatını Girin" class="form-control" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="satis" placeholder="Satış Fiyatını Girin" class="form-control" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="iskonto" placeholder="İskonto Oranını Girin (%)" class="form-control" required>
+                                </div>
+                            </div>
                             <input type="submit" value="Kaydet" class="btn btn-success w-100" name="kaydet">
                         </form>
                     </div>
@@ -145,8 +156,8 @@
         if (isset($_POST['kaydet'])) {
             $gorsel = '../assets/img/' . $_FILES['gorsel']['name'];
             if (move_uploaded_file($_FILES['gorsel']['tmp_name'], $gorsel)) {
-                $modelEkle = $db->prepare('insert into marka_model(marka,model,cc,silindir,kw,tork,motor_tipi,tur,model_yili,yakit_kapasitesi,yakit_tuketimi,lastik_on,lastik_arka,bos_kutle,dolu_kutle,koltuk_yukseklik,durum,aciklama,gorsel) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
-                $modelEkle->execute(array($_POST['marka'], $_POST['model'], $_POST['cc'], $_POST['silindir'], $_POST['kw'], $_POST['tork'], $_POST['motor_tipi'], $_POST['tur'], $_POST['model_yili'], $_POST['yakit_kapasitesi'], $_POST['yakit_tuketimi'], $_POST['lastik_on'], $_POST['lastik_arka'], $_POST['bos_kutle'], $_POST['dolu_kutle'], $_POST['koltuk_yukseklik'], $_POST['durum'], $_POST['aciklama'], $gorsel));
+                $modelEkle = $db->prepare('insert into marka_model(marka,model,cc,silindir,kw,tork,motor_tipi,tur,model_yili,yakit_kapasitesi,yakit_tuketimi,lastik_on,lastik_arka,bos_kutle,dolu_kutle,koltuk_yukseklik,durum,aciklama,alis,satis,iskonto,gorsel) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+                $modelEkle->execute(array($_POST['marka'], $_POST['model'], $_POST['cc'], $_POST['silindir'], $_POST['kw'], $_POST['tork'], $_POST['motor_tipi'], $_POST['tur'], $_POST['model_yili'], $_POST['yakit_kapasitesi'], $_POST['yakit_tuketimi'], $_POST['lastik_on'], $_POST['lastik_arka'], $_POST['bos_kutle'], $_POST['dolu_kutle'], $_POST['koltuk_yukseklik'], $_POST['durum'], $_POST['aciklama'], $_POST['alis'], $_POST['satis'], $_POST['iskonto'], $gorsel));
                 if ($modelEkle->rowCount()) {
                     echo '<script>alert("Kayıt işlemi başarılı")</script><meta http-equiv="refresh" content="0; url=marka-model.php">';
                 } else {

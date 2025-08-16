@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://kit.fontawesome.com/268e8bfc29.js" crossorigin="anonymous"></script>
-    <title>Rauh Welt Motocycle | Şablon</title>
+    <title>Rauh Welt Motocycle | </title>
 </head>
 
 <body>
@@ -39,16 +39,16 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="z-index: 99999;">
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
                                     <li class="nav-item my-auto">
-                                        <a class="nav-link active" aria-current="page" href="#">Anasayfa</a>
+                                        <a class="nav-link active" aria-current="page" href="index.php">Anasayfa</a>
                                     </li>
                                     <li class="nav-item my-auto">
-                                        <a class="nav-link active" href="#">Modeller</a>
+                                        <a class="nav-link active" href="modeller.php">Modeller</a>
                                     </li>
                                     <li class="nav-item my-auto">
                                         <a class="nav-link active" href="#">Aksesuarlar</a>
                                     </li>
                                     <div class="col-md-2">
-                                        <a class="navbar-brand" href="index.html"><img src="./assets/img/rauh-welt-logo-450x169.png"
+                                        <a class="navbar-brand" href="index.php"><img src="./assets/img/rauh-welt-logo-450x169.png"
                                                 alt=" Rauh Welt Logo" class="img-fluid"></a>
                                     </div>
                                     <li class="nav-item dropdown my-auto">

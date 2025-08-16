@@ -2,12 +2,13 @@
 
 ---Yapılacaklar---
 
-Anasayfa tamamlanacak.
-    Sayfanın en altına markaların yan yana görseli eklenecek. Görseller markaların sayfalarından alınacak. Ayrı ayrı eklenecek. Tıklanıldığında o markanın ürünleri listelenecek. display ile yerleştirilecek. 
-    Tıklanan ürünlerin detay sayfasına gidecek.
-
 Modeller sayfası yapılacak
     filtre olacak.
-    tüm modeller listelenecek.
     modele tıklandığında detay sayfasına gidecek.
-    ??????sepete ekle butonu olacak?????
+    sepete ekle butonu olacak ve tıklandığında sepete gidecek. 
+        -Bunun için veri tabanında boş bir sayfa aç. Sepete ekleye tıklanan tüm ürünleri buraya yaz. Her sepete ekleye tıklandığında update çalıştır. Siparişi tamamlanda dediğinde buradan kaydı silip order tablosuna yaz.!!
+
+
+----Admin Paneli----
+Motosiklet Markaları alanına logo eklemek için alan eklenecek ve buraya eklenen logoların en güncel 4 tanesi index.php'de en altta listelenecek.
+Motosiklet Marka/Model sayfasına girilen tutarları noktalama işaretlerine göre ayır ve TL olarak ekrana yaz!!

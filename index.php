@@ -27,7 +27,7 @@ require_once('./header.php');
                     foreach ($model as $modelList) {
                 ?>
                         <div class="col-md-4 my-2">
-                            <a href="modeller.php?id=<?php echo $modelList['id']; ?>">
+                            <a href="model-detay.php?id=<?php echo $modelList['id']; ?>">
                                 <div class="card">
                                     <b class="my-2 text-center fs-5"><?php echo $modelList['marka']; ?> / <?php echo $modelList['model']; ?></b>
                                     <img src="<?php echo substr($modelList['gorsel'], 1); ?>" alt="<?php echo $modelList['model']; ?>" class="rounded">
@@ -83,22 +83,49 @@ require_once('./header.php');
     </section>
     <!-- Choise Section End -->
     <!-- Email Section Start -->
-    <section id="email" style="background-color: #000;" class="py-5 mb-5">
+    <section id="email" style="background-color: #000;" class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 my-auto">
-                    <span class="fs-5 text-white">Fırsatlardan Haberdar Olmak İçin E-Bülten'e Üye Olun</span>
-                </div>
-                <div class="col-md-6">
-                    <form method="get" style="display:flex; flex-direction:row; gap:10px;">
-                        <input type="text" name="email" placeholder="Email Adresiniz" class="form-control">
-                        <input type="submit" value="Üye Ol" name="uyeol" class="btn btn-success w-25">
+                <div class="col-12 text-white text-center">
+                    <h4>E-BÜLTENE ÜYE OLUN</h4>
+                    <small>Duyurular ve Özel Teklifler İçin</small>
+                    <form method="get">
+                        <div class="dflex mx-auto mt-4">
+                            <input type="text" name="email" placeholder="E-posta adresinizi yazınız" class="form-control w-50">
+                            <input type="submit" name="uyeol" value="Üye Ol" class="form-control btn btn-success w-25">
+                        </div>
+                        <div class="col-md-5 mx-auto mt-3">
+                            <small>Kaydolarak Şartlar ve Koşullarımızı ve Gizlilik Politikamızı kabul etmiş olursunuz. Çıkmak için e-postalarımızdaki Aboneliği İptal Et’i tıklayın.</small>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
     <!-- Email Section End -->
+    <!-- Marka Logoları Section Start -->
+    <section id="logolarSec" class="py-5">
+        <div class="container">
+            <div class="row text-center" style="    display: flex; align-items: center;
+">
+                <div class="col-md-3">
+                    <img src="./assets/img/kawasaki-logo-400x238.webp" alt="" class="w-100">
+                </div>
+                <div class="col-md-3">
+                    <img src="./assets/img/honda-logo-400x300.webp" alt="" class="w-75">
+                </div>
+                <div class="col-md-3">
+                    <img src="./assets/img/rks-logo-425x238.webp" alt="" class="w-100">
+                </div>
+                <div class="col-md-3">
+                    <img src="./assets/img/yamaha-logo-400x238.webp" alt="" class="w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Marka Logoları Section End -->
+
+
     <?php
     require_once('./footer.php');
     ?>

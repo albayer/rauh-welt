@@ -8,8 +8,16 @@
 
 .flex {
     display: flex;
-    column-gap: 10px;
     align-items: center;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.dflex {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    justify-content: center;
 }
 
 body {
@@ -116,6 +124,6 @@ footer {
     font-size: 12px;
 }
 
-#models .card:hover{
+#models .card:hover {
     box-shadow: 0px 0px 24px black;
 }

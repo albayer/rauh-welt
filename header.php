@@ -39,38 +39,38 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="z-index: 99999;">
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
                                     <li class="nav-item my-auto">
-                                        <a class="nav-link active" aria-current="page" href="index.php">Anasayfa</a>
+                                        <a class="nav-link active text-white" aria-current="page" href="index.php">Anasayfa</a>
                                     </li>
                                     <li class="nav-item my-auto">
-                                        <a class="nav-link active" href="modeller.php">Modeller</a>
+                                        <a class="nav-link active text-white" href="modeller.php">Modeller</a>
                                     </li>
                                     <li class="nav-item my-auto">
-                                        <a class="nav-link active" href="#">Aksesuarlar</a>
+                                        <a class="nav-link active text-white" href="#">Aksesuarlar</a>
                                     </li>
                                     <div class="col-md-2">
                                         <a class="navbar-brand" href="index.php"><img src="./assets/img/rauh-welt-logo-450x169.png"
                                                 alt=" Rauh Welt Logo" class="img-fluid"></a>
                                     </div>
                                     <li class="nav-item dropdown my-auto">
-                                        <a class="nav-link active dropdown-toggle" href="#" role="button"
+                                        <a class="nav-link active dropdown-toggle text-white" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             Dropdown
                                         </a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Action</a></li>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li><a class="dropdown-item text-white" href="#">Action</a></li>
+                                            <li><a class="dropdown-item text-white" href="#">Another action</a></li>
                                             <li>
                                                 <hr class="dropdown-divider">
                                             </li>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                            <li><a class="dropdown-item text-white" href="#">Something else here</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item my-auto">
-                                        <a class="nav-link active" href="#">Fiyat
+                                        <a class="nav-link active text-white" href="#">Fiyat
                                             Listesi</a>
                                     </li>
                                     <li class="nav-item my-auto">
-                                        <a class="nav-link active" href="#">İletişim</a>
+                                        <a class="nav-link active text-white" href="#">İletişim</a>
                                     </li>
                                 </ul>
                             </div>

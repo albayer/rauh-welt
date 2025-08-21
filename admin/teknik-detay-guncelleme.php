@@ -144,7 +144,7 @@ if (isset($_POST['guncelle'])) {
             echo '<script>alert("Hata Oluştu")</script><meta http-equiv="refresh" content="0; url=marka-model.php">';
         }
     } else {
-        $guncelle = $db->prepare('update marka_model set marka=?, model=?, cc=?, silindir=?, kw=?, tork=?, motor_tipi=?, tur=?, model_yili=?, yakit_kapasitesi=?, yakit_tuketimi=?, lastik_on=?, lastik_arka=?, bos_kutle=?, dolu_kutle=?, koltuk_yukseklik=?, durum=?, aciklama=?, alis=?, satis=?, iskonto=?, gorsel=? where id=?');
+        $guncelle = $db->prepare('update marka_model set marka=?, model=?, cc=?, silindir=?, kw=?, tork=?, motor_tipi=?, tur=?, model_yili=?, yakit_kapasitesi=?, yakit_tuketimi=?, lastik_on=?, lastik_arka=?, bos_kutle=?, dolu_kutle=?, koltuk_yukseklik=?, durum=?, aciklama=?, alis=?, satis=?, iskonto=?  where id=?');
         $guncelle->execute(array($_POST['markaUP'], $_POST['modelUP'], $_POST['ccUP'], $_POST['silindirUP'], $_POST['kwUP'], $_POST['torkUP'], $_POST['motor_tipiUP'], $_POST['turUP'], $_POST['model_yiliUP'], $_POST['yakit_kapasitesiUP'], $_POST['yakit_tuketimiUP'], $_POST['lastik_onUP'], $_POST['lastik_arkaUP'], $_POST['bos_kutleUP'], $_POST['dolu_kutleUP'], $_POST['koltuk_yukseklikUP'], $_POST['durumUP'], $_POST['aciklamaUP'], $_POST['alisUP'], $_POST['satisUP'], $_POST['iskontoUP'], $id));
 
         if ($guncelle->rowCount()) {

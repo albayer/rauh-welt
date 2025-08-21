@@ -33,9 +33,9 @@
                     <td><?php echo $urunList['tur']; ?></td>
                     <td><?php echo $urunList['cc']; ?></td>
                     <td><?php echo $urunList['model_yili']; ?></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><?php echo $urunList['alis']; ?></td>
+                    <td><?php echo $urunList['satis']; ?></td>
+                    <td><?php echo $urunList['iskonto']; ?></td>
                     <td><a href="teknik-detay-guncelleme.php?updateID=<?php echo $urunList['id']; ?>"><button class="btn btn-warning">Düzenle</button></a></td>
                 </tr>
             <?php

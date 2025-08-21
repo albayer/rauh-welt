@@ -27,7 +27,7 @@ require_once('./header.php');
                     foreach ($model as $modelList) {
                 ?>
                         <div class="col-md-4 my-2">
-                            <a href="model-detay.php?id=<?php echo $modelList['id']; ?>">
+                            <a href="model-detay.php?detayId=<?php echo $modelList['id']; ?>">
                                 <div class="card">
                                     <b class="my-2 text-center fs-5"><?php echo $modelList['marka']; ?> / <?php echo $modelList['model']; ?></b>
                                     <img src="<?php echo substr($modelList['gorsel'], 1); ?>" alt="<?php echo $modelList['model']; ?>" class="rounded">
@@ -59,7 +59,7 @@ require_once('./header.php');
     <section id="cta" style="background-color: #000;" class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center">
+                <div class="col-12 text-center py-5">
                     <a href="iletisim.php" class="text-white fs-4">Yol Yardım ve Servis Ağımızla İlgili Hizmet Almak İçin Bizimle İletişime Geçebilirsiniz.</a>
                 </div>
             </div>
@@ -91,14 +91,27 @@ require_once('./header.php');
                     <small>Duyurular ve Özel Teklifler İçin</small>
                     <form method="get">
                         <div class="dflex mx-auto mt-4">
-                            <input type="text" name="email" placeholder="E-posta adresinizi yazınız" class="form-control w-50">
+                            <input type="email" name="email" placeholder="E-posta adresinizi yazınız" class="form-control w-50">
                             <input type="submit" name="uyeol" value="Üye Ol" class="form-control btn btn-success w-25">
                         </div>
-                        <div class="col-md-5 mx-auto mt-3">
-                            <small>Kaydolarak Şartlar ve Koşullarımızı ve Gizlilik Politikamızı kabul etmiş olursunuz. Çıkmak için e-postalarımızdaki Aboneliği İptal Et’i tıklayın.</small>
-                        </div>
                     </form>
+                    <div class="col-md-5 mx-auto pt-4">
+                        <small>Kaydolarak Şartlar ve Koşullarımızı ve Gizlilik Politikamızı kabul etmiş olursunuz. Çıkmak için e-postalarımızdaki Aboneliği İptal Et’i tıklayın.</small>
+                    </div>
                 </div>
+                <!-- Email Section module Start -->
+                <?php
+                if (isset($_GET['uyeol'])) {
+                    $mailSys = $db->prepare('insert into ebulten(email) values(?)');
+                    $mailSys->execute(array($_GET['email']));
+                    if ($mailSys->rowCount()) {
+                        echo '<script>alert("Ebültene Başarılı Bir Şekilde Üye Oldunuz.")</script><meta http-equiv="refresh" content="0; url=index.php#email">';
+                    } else {
+                        echo '<script>alert("Hata oluştu")</script><meta http-equiv="refresh" content="0; url=index.php#email">';
+                    }
+                }
+                ?>
+                <!-- Email Section module End -->
             </div>
         </div>
     </section>

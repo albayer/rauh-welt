@@ -119,11 +119,12 @@ if (isset($_POST['kaydet'])) {
 
 <!-- Update Modal Start -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel"><?php echo $turUpdateFetch['tur']; ?></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close"></button>
+
                 <!-- Close Button Click Control Start -->
                 <script>
                     document.querySelector('#close').addEventListener('click', function(event) {

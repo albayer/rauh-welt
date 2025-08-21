@@ -56,10 +56,6 @@ body {
     gap: 50px;
 }
 
-.nav-link {
-    color: #fff !important;
-}
-
 .col-md-2 a img {
     height: 120px !important;
     width: 1000px;
@@ -126,4 +122,14 @@ footer {
 
 #models .card:hover {
     box-shadow: 0px 0px 24px black;
+    transition-duration: .5s;
+}
+
+#gallery .col-12 .col-md-2:hover {
+    width: 50%;
+    transition-duration: 3s;
+}
+
+#gallery .col-12 .col-md-2 {
+    transition-duration: 2s;
 }

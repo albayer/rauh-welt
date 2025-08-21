@@ -1,10 +1,19 @@
 <?php require_once('./header.php'); ?>
 
+
 <section id="modelPage" class="py-5">
     <div class="container-fluid">
         <div class="row ms-2">
             <div class="col-md-1 py-5 mt-4">
-                <h3>Buraya Filtre Gelecek</h3>
+                <div>
+                    <h5>Marka Seçiniz</h5>
+                    <form method="get">
+                        <?php
+                        $filtre = $db->prepare('select * from marka group by marka');
+                        $filtre->execute();
+                        ?>
+                    </form>
+                </div>
             </div>
             <div class="col-md-11">
                 <!-- Models Section Start -->
@@ -20,7 +29,7 @@
                             ?>
                                     <div class="col-md-3 mt-4">
                                         <div class="card">
-                                            <a href="model-detay.php?id=<?php echo $modelList['id']; ?>" class="text-dark text-center">
+                                            <a href="model-detay.php?detayId=<?php echo $modelList['id']; ?>" class="text-dark text-center">
                                                 <b class="my-2 text-center fs-5"><?php echo $modelList['marka']; ?> / <?php echo $modelList['model']; ?></b>
                                                 <img src="<?php echo substr($modelList['gorsel'], 1); ?>" alt="<?php echo $modelList['model']; ?>" class="rounded img-fluid">
                                             </a>
@@ -49,16 +58,19 @@
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+            <a class="page-link">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+        </li>
+    </ul>
+</nav>
 
 
 <?php require_once('./footer.php'); ?>

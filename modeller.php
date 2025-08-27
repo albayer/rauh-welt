@@ -7,12 +7,27 @@
             <div class="col-md-1 py-5 mt-4">
                 <div>
                     <h5>Marka Seçiniz</h5>
-                    <form method="get">
+                    <?php
+                    $filtre = $db->prepare('select * from marka_model group by marka');
+                    $filtre->execute();
+                    if ($filtre->rowCount()) {
+                        foreach ($filtre as $filtreList) {
+                    ?>
+                            <a href=""><?php echo $filtreList['marka']; ?></a><br>
                         <?php
-                        $filtre = $db->prepare('select * from marka group by marka');
-                        $filtre->execute();
+                        }
+                    }
+                    if ($filtreList['marka'] == 'Honda') {
                         ?>
-                    </form>
+                        <a href=""><?php echo $filtreList['model']; ?></a>
+                    <?php
+                    } else if ($filtreList['marka'] == 'Kawasaki') {
+                    ?>
+                        <a href=""><?php echo $filtreList['model']; ?></a>
+                    <?php
+                    }
+                    ?>
+
                 </div>
             </div>
             <div class="col-md-11">

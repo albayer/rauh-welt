@@ -15,7 +15,7 @@ if (isset($_GET['detayId'])) {
             <div class="col-md-3" style="margin-left: 8%;">
                 <p class="fs-5"><?php echo $modelsDetayFetch['model_yili'] ?> | <?php echo $modelsDetayFetch['satis']; ?></p>
                 <h2><?php echo $modelsDetayFetch['model']; ?></h2>
-            </div>  
+            </div>
         </div>
         <div class="row" style="display: flex; justify-content:center;">
             <div class="col-md-3"><img src="<?php echo substr($modelsDetayFetch['gorsel'], 1); ?>" alt="" class="img-fluid rounded"></div>
@@ -25,7 +25,7 @@ if (isset($_GET['detayId'])) {
         </div>
 
         <div class="row pt-4" style="margin-left: 7%;">
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <ul class="nav nav-underline" id="titles">
                     <li class="nav-item">
                         <a class="nav-link text-dark" id="link1" name="ad1" aria-current="page" href="#notifications">Teknik Özellikler</a>
@@ -58,6 +58,7 @@ if (isset($_GET['detayId'])) {
 <section id="notifications" class="py-3">
     <div class="container">
         <div class="row" style="margin-left: 7%;">
+            <h3 class="text-center mb-4">Teknik Özellikler</h3>
             <div class="col-12">
                 <table class="table table-stripped">
                     <tbody>
@@ -128,7 +129,7 @@ if (isset($_GET['detayId'])) {
     <div class="container">
         <div class="row" style="margin-left: 7%;">
             <h3 class="text-center mb-4">Fotoğraf Galerisi</h3>
-            <div class="col-12" style="display: flex; column-gap:10px; justify-content:center;">
+            <div class="col-12" style="display: flex; column-gap:50px">
                 <div class="col-md-2">
                     <img src="./assets/img/adventure-motosiklet.webp" alt="" class="img-fluid rounded">
                 </div>
@@ -153,8 +154,8 @@ if (isset($_GET['detayId'])) {
 <!-- detay Section Start -->
 <section id="detay" class="py-5">
     <div class="container">
-        <h3 class="text-center" style="margin-left: 7%;">Detay Bilgiler</h3>
         <div class="row" style="margin-left: 7%;">
+            <h3 class="text-center">Detay Bilgiler</h3>
             <div class="card shadow">
                 <div class="card-body">
                     <div class="row">
@@ -194,6 +195,41 @@ if (isset($_GET['detayId'])) {
     </div>
 </section>
 <!-- detay Section End -->
+
+<!-- Email Section Start -->
+<section id="email" style="background-color: #000;" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-white text-center">
+                <h4>E-BÜLTENE ÜYE OLUN</h4>
+                <small>Duyurular ve Özel Teklifler İçin</small>
+                <form method="get">
+                    <div class="dflex mx-auto mt-4">
+                        <input type="email" name="email" placeholder="E-posta adresinizi yazınız" class="form-control w-50">
+                        <input type="submit" name="uyeol" value="Üye Ol" class="form-control btn btn-success w-25">
+                    </div>
+                </form>
+                <div class="col-md-5 mx-auto pt-4">
+                    <small>Kaydolarak Şartlar ve Koşullarımızı ve Gizlilik Politikamızı kabul etmiş olursunuz. Çıkmak için e-postalarımızdaki Aboneliği İptal Et’i tıklayın.</small>
+                </div>
+            </div>
+            <!-- Email Section module Start -->
+            <?php
+            if (isset($_GET['uyeol'])) {
+                $mailSys = $db->prepare('insert into ebulten(email) values(?)');
+                $mailSys->execute(array($_GET['email']));
+                if ($mailSys->rowCount()) {
+                    echo '<script>alert("Ebültene Başarılı Bir Şekilde Üye Oldunuz.")</script><meta http-equiv="refresh" content="0; url=index.php#email">';
+                } else {
+                    echo '<script>alert("Hata oluştu")</script><meta http-equiv="refresh" content="0; url=index.php#email">';
+                }
+            }
+            ?>
+            <!-- Email Section module End -->
+        </div>
+    </div>
+</section>
+<!-- Email Section End -->
 
 
 <!-- Script ile teknik özellikler başlığında hangisi seçildiyse onun css'inde display'ini active yapacağız!! -->

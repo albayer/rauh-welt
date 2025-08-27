@@ -1,4 +1,5 @@
 <?php require_once('./assets/baglan.php'); ?>
+
 <!DOCTYPE html>
 <html lang="tr">
 
@@ -70,7 +71,7 @@
                                             Listesi</a>
                                     </li>
                                     <li class="nav-item my-auto">
-                                        <a class="nav-link active text-white" href="#">İletişim</a>
+                                        <a class="nav-link active text-white" href="iletisim.php">İletişim</a>
                                     </li>
                                 </ul>
                             </div>

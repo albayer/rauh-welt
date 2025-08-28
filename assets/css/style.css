@@ -126,10 +126,14 @@ footer {
 }
 
 #gallery .col-12 .col-md-2:hover {
-    width: 50%;
+    width: 40%;
     transition-duration: 3s;
 }
 
 #gallery .col-12 .col-md-2 {
     transition-duration: 2s;
+}
+
+.dropdown-menu{
+    --bs-dropdown-link-hover-bg:none;
 }

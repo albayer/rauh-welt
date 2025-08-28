@@ -55,15 +55,11 @@
                                     <li class="nav-item dropdown my-auto">
                                         <a class="nav-link active dropdown-toggle text-white" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
-                                            Dropdown
+                                            Hizmetlerimiz
                                         </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item text-white" href="#">Action</a></li>
-                                            <li><a class="dropdown-item text-white" href="#">Another action</a></li>
-                                            <li>
-                                                <hr class="dropdown-divider">
-                                            </li>
-                                            <li><a class="dropdown-item text-white" href="#">Something else here</a></li>
+                                        <ul class="dropdown-menu" style="background-color: #000;">
+                                            <li><a class="dropdown-item text-white" href="servis.php">Servis</a></li>
+                                            <li><a class="dropdown-item text-white" href="destek.php">Satış Sonrası Destek</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item my-auto">

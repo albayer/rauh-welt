@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1:3306
--- Üretim Zamanı: 23 Eyl 2025, 08:11:03
+-- Üretim Zamanı: 23 Eyl 2025, 16:41:39
 -- Sunucu sürümü: 9.1.0
 -- PHP Sürümü: 8.3.14
 
@@ -143,6 +143,31 @@ INSERT INTO `marka_model` (`id`, `marka`, `model`, `cc`, `silindir`, `kw`, `tork
 -- --------------------------------------------------------
 
 --
+-- Tablo için tablo yapısı `mesajlar`
+--
+
+DROP TABLE IF EXISTS `mesajlar`;
+CREATE TABLE IF NOT EXISTS `mesajlar` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `adSoyad` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `tel` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `mesaj` text COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tablo döküm verisi `mesajlar`
+--
+
+INSERT INTO `mesajlar` (`id`, `adSoyad`, `tel`, `email`, `mesaj`) VALUES
+(1, 'Alperen Bayer', '5344506123', 'alperen-bayer@hotmail.com', 'yardım edin'),
+(2, 'Alperen Bayer', '5344506123', 'alperen-bayer@hotmail.com', 'yardım edin lütfen//'),
+(3, 'Alperen Bayer', '5344506123', 'alperen-bayer@hotmail.com', 'yardım edin lütfen//asd');
+
+-- --------------------------------------------------------
+
+--
 -- Tablo için tablo yapısı `motosiklet_turleri`
 --
 
@@ -180,11 +205,20 @@ INSERT INTO `motosiklet_turleri` (`id`, `tur`, `durum`, `kullanim_alani`, `acikl
 DROP TABLE IF EXISTS `servis`;
 CREATE TABLE IF NOT EXISTS `servis` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `ad` int NOT NULL,
-  `adres` int NOT NULL,
-  `tel` int NOT NULL,
+  `ad` text COLLATE utf8mb4_general_ci NOT NULL,
+  `adres` text COLLATE utf8mb4_general_ci NOT NULL,
+  `tel` text COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tablo döküm verisi `servis`
+--
+
+INSERT INTO `servis` (`id`, `ad`, `adres`, `tel`) VALUES
+(3, 'Bayer Moto', 'Esenkent Mahallesi Üstün Sokak No:75 Maltepe İstanbul', '05344506123'),
+(4, 'Alperen Moto', 'Esenkent Mahallesi Üstün Sokak No:75 Maltepe İstanbul', '05344506123'),
+(5, 'Moto Moto', 'Esenkent Mahallesi Üstün Sokak No:75 Maltepe İstanbul', '05344506123');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

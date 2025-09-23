@@ -56,7 +56,7 @@
                                                 <small>Satış Fiyatı</small>:<b> <?php echo $modelList['satis']; ?></b>
                                             </div>
                                             <form method="get" class="my-2 text-center w-100">
-                                                <div class="btn btn btn-primary">Sepete Ekle</div>
+                                                <a href="iletisim.php#form" class="btn btn-warning">Bilgi Almak için Tıklayın</a>
                                             </form>
                                         </div>
                                     </div>

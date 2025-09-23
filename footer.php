@@ -1,5 +1,4 @@
     <footer class="py-5">
-
         <section id="topFooter" class="py-3">
             <div class="container">
                 <div class="row text-center">
@@ -24,9 +23,6 @@
                 </div>
             </div>
         </section>
-
-
-
         <section id="socialMedia" class="py-3">
             <div class="container">
                 <div class="row">

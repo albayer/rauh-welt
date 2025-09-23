@@ -4,11 +4,18 @@
 
 Modeller sayfası yapılacak
     filtre olacak.
-    modele tıklandığında detay sayfasına gidecek.
-    sepete ekle butonu olacak ve tıklandığında sepete gidecek. 
-        -Bunun için veri tabanında boş bir sayfa aç. Sepete ekleye tıklanan tüm ürünleri buraya yaz. Her sepete ekleye tıklandığında update çalıştır. Siparişi tamamlanda dediğinde buradan kaydı silip order tablosuna yaz.!!
-
-
+        
 ----Admin Paneli----
-Motosiklet Markaları alanına logo eklemek için alan eklenecek ve buraya eklenen logoların en güncel 4 tanesi index.php'de en altta listelenecek.
 Motosiklet Marka/Model sayfasına girilen tutarları noktalama işaretlerine göre ayır ve TL olarak ekrana yaz!!
+
+---Modeller---
+modeller sayfasında "Bilgi almak için tıklayın" butonuna modal ekleyip, buradan form aracılığı ile talebi alıp vt'ye yazmak daha mantıklı. Admin paneline de hangi motosiklet için oluşturulduğu bilgisi alınarak yazılacak.
+
+---Servis---
+ Servis sayfasında "Hemen Randevu Oluştur" butonuna modal ekleyip, buradan form aracılığı ile talebi alıp vt'ye yazmak daha mantıklı. Admin paneline de hangi bayi için oluşturulduğu bilgisi alınarak yazılacak. 
+
+ ---Fiyat Listesi---
+ Fiyat Listesi sayfası yapılacak. senelere göre pdfler yüklenebilir. önr: 2024 satış fiyatı -> PDF Lİnki, 2025 Satış Fiyatı -> PDF Linki
+
+ ---Anasayfa---
+ Anasayfada bulunan motosiklet türlerinden hangisine tıklanırsa o listede bulunan ürünleri karşısına çıkartsın.

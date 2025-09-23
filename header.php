@@ -38,7 +38,7 @@
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="z-index: 99999;">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                     <li class="nav-item my-auto">
                                         <a class="nav-link active text-white" aria-current="page" href="index.php">Anasayfa</a>
                                     </li>
@@ -46,21 +46,14 @@
                                         <a class="nav-link active text-white" href="modeller.php">Modeller</a>
                                     </li>
                                     <li class="nav-item my-auto">
-                                        <a class="nav-link active text-white" href="#">Aksesuarlar</a>
+                                        <a class="nav-link active text-white" href="destek.php">Satış Sonrası</a>
                                     </li>
                                     <div class="col-md-2">
                                         <a class="navbar-brand" href="index.php"><img src="./assets/img/rauh-welt-logo-450x169.png"
                                                 alt=" Rauh Welt Logo" class="img-fluid"></a>
                                     </div>
-                                    <li class="nav-item dropdown my-auto">
-                                        <a class="nav-link active dropdown-toggle text-white" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            Hizmetlerimiz
-                                        </a>
-                                        <ul class="dropdown-menu" style="background-color: #000;">
-                                            <li><a class="dropdown-item text-white" href="servis.php">Servis</a></li>
-                                            <li><a class="dropdown-item text-white" href="destek.php">Satış Sonrası Destek</a></li>
-                                        </ul>
+                                    <li class="nav-item my-auto">
+                                        <a class="nav-link active text-white" href="servis.php">Servis</a>
                                     </li>
                                     <li class="nav-item my-auto">
                                         <a class="nav-link active text-white" href="#">Fiyat

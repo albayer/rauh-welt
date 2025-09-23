@@ -1,24 +1,25 @@
 <?php require_once('./header.php'); ?>
+
 <section id="servis" class="py-5">
     <div class="container">
         <div class="row">
             Banner Gelebilir maybe
-            <h1>Admin paneli yazılacak.!!</h1>
-            <h2 class="text-center pt-4">Satış Sonrası Servis Hizmetlerimiz</h2>
+            <h2 class="text-center pt-4">Satış Sonrası Servis Ağımız</h2>
             <?php
-            $destek = $db->prepare('select * from destek');
-            $destek->execute();
-            if ($destek->rowCount()) {
-                foreach ($destek as $destekList) {
+            $servis = $db->prepare('select * from servis');
+            $servis->execute();
+            if ($servis->rowCount()) {
+                foreach ($servis as $servisList) {
             ?>
                     <div class="col-md-4 py-2">
                         <div class="card shadow">
                             <div class="card-body text-center">
-                                <h3>echo Firma Adı</h3>
+                                <h3><?php echo $servisList['ad']; ?></h3>
                                 <hr>
-                                <span>echo Adres</span><hr>
-                                <span class="my-5">echo Telefon</span><hr>
-                                <a href="iletisim.php"><button class="btn btn-primary">randevu için tıklayınız</button></a>
+                                <span><?php echo $servisList['tel']; ?></span><hr>
+                                <span class="my-5"><?php echo $servisList['adres']; ?></span><hr>
+                                <a href="iletisim.php#form"><button class="btn btn-primary">Hemen Randevu Oluştur</button></a>
+                                pop-up ile açıp bu şekilde randevu talebi kaydedilebilir.!
                             </div>
                         </div>
                     </div>

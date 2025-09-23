@@ -34,57 +34,14 @@ if (!isset($_SESSION['userName'])) {
                     <a href="logout.php" class="text-white text-decoration-none">Güvenli Çıkış</a>
                 </div>
             </div>
-            <div class="row" style="height: 97.6vh; font-size:14px;">
-                <div class="col-md-2 bg-black py-3" id="adminNav">
+            <div class="row" style="height: 97.6vh; font-size:15px;">
+                <div class="col-md-2 bg-black ps-4 py-3" id="adminNav" style="display: flex; flex-direction:column;">
                     <a href="dashboard.php" class="text-white">Başlangıç</a><br>
-
-                    <div class="accordion-item my-2">
-                        <h2 class="accordion-menu">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="color: #fff; font-size:14px;">
-                                Kategoriler<i class="bi bi-plus-circle ps-1"></i>
-                            </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                <ol style="list-style: none; color:#fff; margin-bottom:0px;">
-                                    <li class="my-1"><a href="motosiklet_turleri.php" style="text-decoration: none; color:#fff">Motosiklet Türleri</a></li>
-                                    <li><a href="marka.php" style="text-decoration: none; color:#fff">Motosiklet Markaları</a></li>
-                                    <li><a href="marka-model.php" style="text-decoration: none; color:#fff">Motosiklet Marka-Modelleri</a></li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="motosiklet_turleri.php" style="text-decoration: none; color:#fff">Motosiklet Türleri</a><br>
+                    <a href="marka.php" style="text-decoration: none; color:#fff">Motosiklet Markaları</a><br>
+                    <a href="marka-model.php" style="text-decoration: none; color:#fff">Motosiklet Marka-Modelleri</a><br>
                     <a href="urun-listesi.php" class="text-white">Ürün Listesi</a><br>
-                    <div class="accordion-item">
-                        <h2 class="accordion-menu">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo" style="color: #fff; font-size:14px;">
-                                <i class="bi bi-plus-circle pe-2"></i>Accordion Item
-                            </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                <ol style="list-style: none; color:#fff">
-                                    <li><a href="" style="text-decoration: none; color:#fff">1.başlık</a></li>
-                                    <li><a href="" style="text-decoration: none; color:#fff">1.başlık</a></li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-menu">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree" style="color: #fff; font-size:14px;">
-                                <i class="bi bi-plus-circle pe-2"></i>Accordion Item
-                            </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                <ol style="list-style: none; color:#fff">
-                                    <li><a href="" style="text-decoration: none; color:#fff">1.başlık</a></li>
-                                    <li><a href="" style="text-decoration: none; color:#fff">1.başlık</a></li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="mesajlar.php" class="text-white">Mesajlar</a><br>
                     <a href="logout.php" class="text-warning">Güvenli Çıkış</a>
                 </div>
                 <div class="col-md-10 bg-light py-3">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1:3306
--- Üretim Zamanı: 27 Ağu 2025, 16:49:02
+-- Üretim Zamanı: 23 Eyl 2025, 08:11:03
 -- Sunucu sürümü: 9.1.0
 -- PHP Sürümü: 8.3.14
 
@@ -33,9 +33,19 @@ CREATE TABLE IF NOT EXISTS `destek` (
   `ad` varchar(120) COLLATE utf8mb4_general_ci NOT NULL,
   `adres` varchar(400) COLLATE utf8mb4_general_ci NOT NULL,
   `tel` varchar(11) COLLATE utf8mb4_general_ci NOT NULL,
-  `sehir` int NOT NULL,
+  `sehir` varchar(22) COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tablo döküm verisi `destek`
+--
+
+INSERT INTO `destek` (`id`, `ad`, `adres`, `tel`, `sehir`) VALUES
+(1, 'Aras Moto', 'Hasanpaşa, Nabizade Sk. 84/A, 34722 Kadıköy/İstanbul', '0216 348 93', 'İstanbul'),
+(2, 'Aras Moto', 'Hasanpaşa, Nabizade Sk. 84/A, 34722 Kadıköy/İstanbul', '0216 348 93', 'İstanbul'),
+(3, 'Aras Moto', 'Hasanpaşa, Nabizade Sk. 84/A, 34722 Kadıköy/İstanbul', '0216 348 93', 'İstanbul'),
+(4, 'Aras Moto', 'Hasanpaşa, Nabizade Sk. 84/A, 34722 Kadıköy/İstanbul', '0216 348 93', 'İstanbul');
 
 -- --------------------------------------------------------
 

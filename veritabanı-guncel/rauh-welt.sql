@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1:3306
--- Üretim Zamanı: 23 Eyl 2025, 16:41:39
+-- Üretim Zamanı: 24 Eyl 2025, 16:02:26
 -- Sunucu sürümü: 9.1.0
 -- PHP Sürümü: 8.3.14
 
@@ -20,6 +20,22 @@ SET time_zone = "+00:00";
 --
 -- Veritabanı: `rauh-welt`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `bilgi`
+--
+
+DROP TABLE IF EXISTS `bilgi`;
+CREATE TABLE IF NOT EXISTS `bilgi` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `adSoyad` text COLLATE utf8mb4_general_ci NOT NULL,
+  `tel` text COLLATE utf8mb4_general_ci NOT NULL,
+  `konu` text COLLATE utf8mb4_general_ci NOT NULL,
+  `mM` text COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -68,6 +84,20 @@ INSERT INTO `ebulten` (`id`, `email`) VALUES
 (1, 'alperen-bayer@hotmail.com'),
 (2, 'sdsadad'),
 (3, 'alperenbayer@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `fiyat_listesi`
+--
+
+DROP TABLE IF EXISTS `fiyat_listesi`;
+CREATE TABLE IF NOT EXISTS `fiyat_listesi` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `adi` text COLLATE utf8mb4_general_ci NOT NULL,
+  `dosya_yolu` text COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 

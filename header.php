@@ -56,7 +56,7 @@
                                         <a class="nav-link active text-white" href="servis.php">Servis</a>
                                     </li>
                                     <li class="nav-item my-auto">
-                                        <a class="nav-link active text-white" href="#">Fiyat
+                                        <a class="nav-link active text-white" href="fiyat-listesi.php">Fiyat
                                             Listesi</a>
                                     </li>
                                     <li class="nav-item my-auto">

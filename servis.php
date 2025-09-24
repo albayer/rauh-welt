@@ -16,8 +16,10 @@
                             <div class="card-body text-center">
                                 <h3><?php echo $servisList['ad']; ?></h3>
                                 <hr>
-                                <span><?php echo $servisList['tel']; ?></span><hr>
-                                <span class="my-5"><?php echo $servisList['adres']; ?></span><hr>
+                                <span><?php echo $servisList['tel']; ?></span>
+                                <hr>
+                                <span class="my-5"><?php echo $servisList['adres']; ?></span>
+                                <hr>
                                 <a href="iletisim.php#form"><button class="btn btn-primary">Hemen Randevu Oluştur</button></a>
                                 pop-up ile açıp bu şekilde randevu talebi kaydedilebilir.!
                             </div>
@@ -31,18 +33,4 @@
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php require_once('./footer.php'); ?>

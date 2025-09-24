@@ -42,6 +42,8 @@ if (!isset($_SESSION['userName'])) {
                     <a href="marka-model.php" style="text-decoration: none; color:#fff">Motosiklet Marka-Modelleri</a><br>
                     <a href="urun-listesi.php" class="text-white">Ürün Listesi</a><br>
                     <a href="mesajlar.php" class="text-white">Mesajlar</a><br>
+                    <a href="servis.php" class="text-white">Servis</a><br>
+                    <a href="fiyat.php" class="text-white">Fiyat Listesi</a><br>
                     <a href="logout.php" class="text-warning">Güvenli Çıkış</a>
                 </div>
                 <div class="col-md-10 bg-light py-3">

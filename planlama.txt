@@ -2,20 +2,18 @@
 
 ---Yapılacaklar---
 
-Modeller sayfası yapılacak
+----Modeller sayfasında yapılacaklar----
     filtre olacak.
-        
-----Admin Paneli----
-Motosiklet Marka/Model sayfasına girilen tutarları noktalama işaretlerine göre ayır ve TL olarak ekrana yaz!!
-
----Modeller---
-modeller sayfasında "Bilgi almak için tıklayın" butonuna modal ekleyip, buradan form aracılığı ile talebi alıp vt'ye yazmak daha mantıklı. Admin paneline de hangi motosiklet için oluşturulduğu bilgisi alınarak yazılacak.
+    "Bilgi almak için tıklayın" butonuna modal ekleyip, buradan form aracılığı ile talebi alıp vt'ye yazmak daha mantıklı. Admin paneline de hangi motosiklet için oluşturulduğu bilgisi alınarak yazılacak.
 
 ---Servis---
  Servis sayfasında "Hemen Randevu Oluştur" butonuna modal ekleyip, buradan form aracılığı ile talebi alıp vt'ye yazmak daha mantıklı. Admin paneline de hangi bayi için oluşturulduğu bilgisi alınarak yazılacak. 
 
- ---Fiyat Listesi---
- Fiyat Listesi sayfası yapılacak. senelere göre pdfler yüklenebilir. önr: 2024 satış fiyatı -> PDF Lİnki, 2025 Satış Fiyatı -> PDF Linki
 
- ---Anasayfa---
- Anasayfada bulunan motosiklet türlerinden hangisine tıklanırsa o listede bulunan ürünleri karşısına çıkartsın.
+
+ ----Admin Paneli----
+başlangıç sayfasına küçük önizlemeler yerleştirilecek. örn mesajlar gibi
+ürün listesi sayfasında alış fiyatı, satış fiyatı, indirim oranı verileri çekiliyor fakat bu alanlar dolu olmadığı için boş görünüyor. bu alanlar doldurulacak. bu alanlar doldurulurken arka planda TL uyumu ayarlanacak.
+mesajlar sayfası belki biraz daha detaylandırılabilir. yani mesajın hangi sayfadan gönderildiği yakalanıp yazdırılabilir veya kullanıcıya select ile birkaç seçenek sunulabilir.
+fiyat listesi sayfasında pdf eklenince site içinde adresten kaynaklı görünmüyor. bu çözümlenmeli.
+mesajlar sayfasında mesaj durumu değiştirmek için exampleModal eklenecek.!!

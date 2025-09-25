@@ -52,13 +52,20 @@
                 <input type="text" name="adSoyad" placeholder="Adınız Soyadınız" class="form-control">
                 <input type="tel" name="tel" placeholder="Telefon Numaranız" class="form-control my-2">
                 <input type="email" name="email" placeholder="Email Adresiniz" class="form-control">
-                <textarea name="mesaj" cols="30" class="form-control my-2" placeholder="Yardım almak istediğiniz konuyu kısaca yazınız."></textarea>
-                <input type="submit" name="gonder" value="Gönder" class="btn btn-success form-control w-25" style="margin-left:970px;">
+                <select name="konuBaslik" value="Konu Başlığını Seçiniz" class="form-control my-2">
+                    <option value="">Seçiniz</option>
+                    <option value="Ürünler">Ürünler</option>
+                    <option value="Servis">Servis</option>
+                    <option value="Satış Sonrası Destek">Satış Sonrası Destek</option>
+                    <option value="Hiçbiri">Hiçbiri</option>
+                </select>
+                <textarea name="mesaj" cols="30" class="form-control" placeholder="Yardım almak istediğiniz konuyu kısaca yazınız."></textarea>
+                <input type="submit" name="gonder" value="Gönder" class="btn btn-success form-control w-25 mt-2" style="margin-left:970px;">
             </form>
             <?php
             if (isset($_POST['gonder'])) {
-                $mesaj = $db->prepare('insert into mesajlar(adSoyad, tel, email, mesaj) values(?,?,?,?)');
-                $mesaj->execute(array($_POST['adSoyad'], $_POST['tel'], $_POST['email'], $_POST['mesaj'],));
+                $mesaj = $db->prepare('insert into mesajlar(adSoyad, tel, email,konuBaslik, mesaj, durum) values(?,?,?,?,?,?)');
+                $mesaj->execute(array($_POST['adSoyad'], $_POST['tel'], $_POST['email'], $_POST['konuBaslik'], $_POST['mesaj'], 'Okunmadı'));
 
                 if ($mesaj->rowCount()) {
                     echo '<script>alert("Mesajınız iletildi. En kısa sürede sizinle iletişim kurulacaktır.")</script><meta http-equiv="refresh" content="0; url=iletisim.php">';

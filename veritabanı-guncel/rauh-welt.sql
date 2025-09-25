@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1:3306
--- Üretim Zamanı: 24 Eyl 2025, 16:02:26
+-- Üretim Zamanı: 25 Eyl 2025, 15:17:05
 -- Sunucu sürümü: 9.1.0
 -- PHP Sürümü: 8.3.14
 
@@ -97,7 +97,15 @@ CREATE TABLE IF NOT EXISTS `fiyat_listesi` (
   `adi` text COLLATE utf8mb4_general_ci NOT NULL,
   `dosya_yolu` text COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tablo döküm verisi `fiyat_listesi`
+--
+
+INSERT INTO `fiyat_listesi` (`id`, `adi`, `dosya_yolu`) VALUES
+(1, 'ss', '../assets/pdf/CV.pdf'),
+(2, '2024 Yılı Fiyat Listesi', '../assets/pdf/CV.pdf');
 
 -- --------------------------------------------------------
 
@@ -182,18 +190,26 @@ CREATE TABLE IF NOT EXISTS `mesajlar` (
   `adSoyad` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
   `tel` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
   `email` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `mesaj` text COLLATE utf8mb4_general_ci NOT NULL,
+  `konuBaslik` text COLLATE utf8mb4_general_ci NOT NULL,
+  `mesaj` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `durum` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Tablo döküm verisi `mesajlar`
 --
 
-INSERT INTO `mesajlar` (`id`, `adSoyad`, `tel`, `email`, `mesaj`) VALUES
-(1, 'Alperen Bayer', '5344506123', 'alperen-bayer@hotmail.com', 'yardım edin'),
-(2, 'Alperen Bayer', '5344506123', 'alperen-bayer@hotmail.com', 'yardım edin lütfen//'),
-(3, 'Alperen Bayer', '5344506123', 'alperen-bayer@hotmail.com', 'yardım edin lütfen//asd');
+INSERT INTO `mesajlar` (`id`, `adSoyad`, `tel`, `email`, `konuBaslik`, `mesaj`, `durum`) VALUES
+(1, 'Alperen Bayer', '5344506123', 'alperen-bayer@hotmail.com', '', 'yardım edin', ''),
+(2, 'Alperen Bayer', '5344506123', 'alperen-bayer@hotmail.com', '', 'yardım edin lütfen//', ''),
+(3, 'Alperen Bayer', '5344506123', 'alperen-bayer@hotmail.com', '', 'yardım edin lütfen//asd', ''),
+(4, 'Alperen Bayer', '05344506123', 'alperenbayer@gmail.com', 'urunler', 'kawasaki zx10rr hakkında bilgi istiyorum', ''),
+(5, 'Alperen Bayer', '05344506123', 'alperenbayer@gmail.com', 'Satış Sonrası Destek', 'motorumda şöyle bir sorun var ', ''),
+(6, 'Alperen Bayer', '05344506123', 'alperen-bayer@hotmail.com', 'Servis', 'asdads', ''),
+(7, 'Alperen Bayer', '05344506123', 'alperen-bayer@hotmail.com', 'Hiçbiri', 'bunlar değil', ''),
+(8, 'Alperen Bayer', '5344506123', 'alperen-bayer@hotmail.com', 'Servis', 'asdads', 'Okunmadı'),
+(9, 'Alperen Bayer', '05344506123', 'alperen-bayer@hotmail.com', 'Satış Sonrası Destek', 'asdadsads', 'Okunmadı');
 
 -- --------------------------------------------------------
 

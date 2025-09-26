@@ -17,6 +17,7 @@
                 <th>Alış Fiyatı</th>
                 <th>Satış Fiyatı</th>
                 <th>İndirim Oranı%</th>
+                <th>İndirimli Satış Fiyatı</th>
                 <th>Düzenle</th>
             </tr>
         </thead>
@@ -33,9 +34,10 @@
                     <td><?php echo $urunList['tur']; ?></td>
                     <td><?php echo $urunList['cc']; ?></td>
                     <td><?php echo $urunList['model_yili']; ?></td>
-                    <td><?php echo $urunList['alis']; ?></td>
-                    <td><?php echo $urunList['satis']; ?></td>
-                    <td><?php echo $urunList['iskonto']; ?></td>
+                    <td><?php echo number_format($urunList['alis'], 2, ',', '.') . " TL";  ?></td>
+                    <td><?php echo number_format($urunList['satis'], 2, ',', '.') . " TL";  ?></td>
+                    <td><?php echo " %" . number_format($urunList['iskonto'], 0); ?></td>
+                    <td><?php echo substr(number_format((($urunList['satis']/100)*$urunList['iskonto'])-$urunList['satis'],2,',','.'). " TL",1); ?></td>
                     <td><a href="teknik-detay-guncelleme.php?updateID=<?php echo $urunList['id']; ?>"><button class="btn btn-warning">Düzenle</button></a></td>
                 </tr>
             <?php

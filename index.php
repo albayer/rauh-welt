@@ -30,13 +30,14 @@ require_once('./header.php');
                             <a href="model-detay.php?detayId=<?php echo $modelList['id']; ?>">
                                 <div class="card">
                                     <b class="my-2 text-center fs-5"><?php echo $modelList['marka']; ?> / <?php echo $modelList['model']; ?></b>
-                                    <img src="<?php echo substr($modelList['gorsel'], 1); ?>" alt="<?php echo $modelList['model']; ?>" class="rounded">
+                                    <img src="<?php echo substr($modelList['gorsel'], 1); ?>" alt="<?php echo $modelList['model']; ?>" class="rounded img-fluid" style="height: 400px;">
                                     <b class="ms-2"><?php echo $modelList['tur']; ?></b>
                                     <div class="card-body">
                                         <small>Hacim</small>:<b> <?php echo $modelList['cc']; ?></b><br>
                                         <small>HP</small>:<b> <?php echo $modelList['kw']; ?></b><br>
                                         <small>Motor Tipi</small>:<b> <?php echo $modelList['motor_tipi']; ?></b><br>
-                                        <small>Satış Fiyatı</small>:<b> <?php echo $modelList['satis']; ?></b>
+                                        <small>Satış Fiyatı</small>:<b> <?php echo number_format($modelList['satis'], 2, ',', '.') . " TL";  ?></b><br>
+                                        <small>İndirimli Satış Fiyatı</small>:<b> <?php echo number_format($modelList['indirimliSatis'], 2, ',', '.') . " TL";  ?></b>
                                     </div>
                                 </div>
                             </a>
@@ -60,7 +61,7 @@ require_once('./header.php');
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center py-5">
-                    <a href="iletisim.php" class="text-white fs-4">Yol Yardım ve Servis Ağımızla İlgili Hizmet Almak İçin Bizimle İletişime Geçebilirsiniz.</a>
+                    <a href="iletisim.php#form" class="text-white fs-4">Yol Yardım ve Servis Ağımızla İlgili Hizmet Almak İçin Bizimle İletişime Geçebilirsiniz.</a>
                 </div>
             </div>
         </div>

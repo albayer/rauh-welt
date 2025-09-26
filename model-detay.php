@@ -13,7 +13,7 @@ if (isset($_GET['detayId'])) {
     <div class="container">
         <div class="row">
             <div class="col-md-3" style="margin-left: 8%;">
-                <p class="fs-5"><?php echo $modelsDetayFetch['model_yili'] ?> | <?php echo $modelsDetayFetch['satis']; ?></p>
+                <p class="fs-5"><?php echo $modelsDetayFetch['model_yili'] ?> | <?php echo number_format($modelsDetayFetch['satis'], 2, ',', '.') . " TL";  ?></p>
                 <h2><?php echo $modelsDetayFetch['model']; ?></h2>
             </div>
         </div>
@@ -112,9 +112,9 @@ if (isset($_GET['detayId'])) {
                         </tr>
                         <tr>
                             <td><b>Satış Fiyatı:</b></td>
-                            <td><?php echo $modelsDetayFetch['satis']; ?></td>
-                            <td></td>
-                            <td></td>
+                            <td><?php echo number_format($modelsDetayFetch['satis'], 2, ',', '.') . " TL";  ?></td>
+                            <td><b>İndirimli Satış Fiyatı</b></td>
+                            <td><?php echo number_format($modelsDetayFetch['indirimliSatis'], 2, ',', '.') . " TL";  ?></td>
                         </tr>
                     </tbody>
                 </table>

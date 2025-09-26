@@ -153,11 +153,17 @@
             </div>
         </div>
         <?php
+
+        // echo substr(number_format((($urunList['satis']/100)*$urunList['iskonto'])-$urunList['satis'],2,',','.'). " TL",1);
         if (isset($_POST['kaydet'])) {
+            $indirimHesapla = substr((($_POST['satis'] / 100) * $_POST['iskonto']) - $_POST['satis'], 1);
+            $indirimHesapla = str_replace('.', '', $indirimHesapla); // binlik ayırıcıları sil
+            $indirimHesapla = str_replace(',', '.', $indirimHesapla); // virgülü noktaya çevir
+            $indirimFiyat = (float) $indirimHesapla;
             $gorsel = '../assets/img/' . $_FILES['gorsel']['name'];
             if (move_uploaded_file($_FILES['gorsel']['tmp_name'], $gorsel)) {
-                $modelEkle = $db->prepare('insert into marka_model(marka,model,cc,silindir,kw,tork,motor_tipi,tur,model_yili,yakit_kapasitesi,yakit_tuketimi,lastik_on,lastik_arka,bos_kutle,dolu_kutle,koltuk_yukseklik,durum,aciklama,alis,satis,iskonto,gorsel) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
-                $modelEkle->execute(array($_POST['marka'], $_POST['model'], $_POST['cc'], $_POST['silindir'], $_POST['kw'], $_POST['tork'], $_POST['motor_tipi'], $_POST['tur'], $_POST['model_yili'], $_POST['yakit_kapasitesi'], $_POST['yakit_tuketimi'], $_POST['lastik_on'], $_POST['lastik_arka'], $_POST['bos_kutle'], $_POST['dolu_kutle'], $_POST['koltuk_yukseklik'], $_POST['durum'], $_POST['aciklama'], $_POST['alis'], $_POST['satis'], $_POST['iskonto'], $gorsel));
+                $modelEkle = $db->prepare('insert into marka_model(marka,model,cc,silindir,kw,tork,motor_tipi,tur,model_yili,yakit_kapasitesi,yakit_tuketimi,lastik_on,lastik_arka,bos_kutle,dolu_kutle,koltuk_yukseklik,durum,aciklama,alis,satis,iskonto,indirimliSatis,gorsel) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+                $modelEkle->execute(array($_POST['marka'], $_POST['model'], $_POST['cc'], $_POST['silindir'], $_POST['kw'], $_POST['tork'], $_POST['motor_tipi'], $_POST['tur'], $_POST['model_yili'], $_POST['yakit_kapasitesi'], $_POST['yakit_tuketimi'], $_POST['lastik_on'], $_POST['lastik_arka'], $_POST['bos_kutle'], $_POST['dolu_kutle'], $_POST['koltuk_yukseklik'], $_POST['durum'], $_POST['aciklama'], $_POST['alis'], $_POST['satis'], $_POST['iskonto'], $indirimFiyat, $gorsel));
                 if ($modelEkle->rowCount()) {
                     echo '<script>alert("Kayıt işlemi başarılı")</script><meta http-equiv="refresh" content="0; url=marka-model.php">';
                 } else {

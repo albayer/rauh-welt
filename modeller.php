@@ -45,18 +45,19 @@
                                     <div class="col-md-3 mt-4">
                                         <div class="card">
                                             <a href="model-detay.php?detayId=<?php echo $modelList['id']; ?>" class="text-dark text-center">
-                                                <b class="my-2 text-center fs-5"><?php echo $modelList['marka']; ?> / <?php echo $modelList['model']; ?></b>
-                                                <img src="<?php echo substr($modelList['gorsel'], 1); ?>" alt="<?php echo $modelList['model']; ?>" class="rounded img-fluid">
+                                                <b class="my-2 text-center fs-5"><small><?php echo $modelList['marka']; ?> / <?php echo $modelList['model']; ?></small></b>
+                                                <img src="<?php echo substr($modelList['gorsel'], 1); ?>" alt="<?php echo $modelList['model']; ?>" class="rounded img-fluid" style="height: 275px;">
                                             </a>
                                             <b class="ms-2"><?php echo $modelList['tur']; ?></b>
                                             <div class="card-body">
                                                 <small>Hacim</small>:<b> <?php echo $modelList['cc']; ?></b><br>
                                                 <small>HP</small>:<b> <?php echo $modelList['kw']; ?></b><br>
                                                 <small>Motor Tipi</small>:<b> <?php echo $modelList['motor_tipi']; ?></b><br>
-                                                <small>Satış Fiyatı</small>:<b> <?php echo $modelList['satis']; ?></b>
+                                                <small>Satış Fiyatı</small>:<b> <?php echo number_format($modelList['satis'], 2, ',', '.') . " TL";  ?></b><br>
+                                                <small>İndirimli Satış Fiyatı</small>:<b> <?php echo number_format($modelList['indirimliSatis'], 2, ',', '.') . " TL";  ?></b>
                                             </div>
                                             <form method="get" class="my-2 text-center w-100">
-                                                <a href="iletisim.php#form" class="btn btn-warning">Bilgi Almak için Tıklayın</a>
+                                                <a href="iletisim.php#form" class="btn btn-warning mb-2">Bilgi Almak için Tıklayın</a>
                                             </form>
                                         </div>
                                     </div>

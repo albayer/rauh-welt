@@ -44,6 +44,7 @@ if (!isset($_SESSION['userName'])) {
                     <a href="urun-listesi.php" class="text-white">Ürün Listesi</a><br>
                     <a href="urunMesajlari.php" class="text-white">Ürün Mesajları</a><br>
                     <a href="servisMesajlari.php" class="text-white">Servis Mesajları</a><br>
+                    <a href="digerMesajlar.php" class="text-white">Diğer Mesajlar</a><br>
                     <a href="fiyat.php" class="text-white">Fiyat Listesi</a><br>
                     <a href="logout.php" class="text-warning">Güvenli Çıkış</a>
                 </div>

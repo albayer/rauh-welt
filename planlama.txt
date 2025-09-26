@@ -4,16 +4,15 @@
 
 ----Modeller sayfasında yapılacaklar----
     filtre olacak.
-    "Bilgi almak için tıklayın" butonuna modal ekleyip, buradan form aracılığı ile talebi alıp vt'ye yazmak daha mantıklı. Admin paneline de hangi motosiklet için oluşturulduğu bilgisi alınarak yazılacak.
-
----Servis---
- Servis sayfasında "Hemen Randevu Oluştur" butonuna modal ekleyip, buradan form aracılığı ile talebi alıp vt'ye yazmak daha mantıklı. Admin paneline de hangi bayi için oluşturulduğu bilgisi alınarak yazılacak. 
-
 
 
  ----Admin Paneli----
-başlangıç sayfasına küçük önizlemeler yerleştirilecek. örn mesajlar gibi
-ürün listesi sayfasında alış fiyatı, satış fiyatı, indirim oranı verileri çekiliyor fakat bu alanlar dolu olmadığı için boş görünüyor. bu alanlar doldurulacak. bu alanlar doldurulurken arka planda TL uyumu ayarlanacak.
-mesajlar sayfası belki biraz daha detaylandırılabilir. yani mesajın hangi sayfadan gönderildiği yakalanıp yazdırılabilir veya kullanıcıya select ile birkaç seçenek sunulabilir.
-fiyat listesi sayfasında pdf eklenince site içinde adresten kaynaklı görünmüyor. bu çözümlenmeli.
-mesajlar sayfasında mesaj durumu değiştirmek için exampleModal eklenecek.!!
+
+
+
+
+ürün listesine manuel eklediğim indirimli fiyat hesaplama modulünü kayıt esnasında yapması için kayıt aşamasına bunu da ekleyeceğiz. vt'de veriler 0 fakat hesaplama yaptığım ürün-listesi sayfasında doğru geliyor.!!!
+
+
+
+admin sayfasında mesajlar için kaç adet okunmamış mesaj olduğu bilgisini veren baloncuk eklenecek.

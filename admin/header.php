@@ -1,10 +1,23 @@
-<?php require_once('../assets/baglan.php');
+<?php 
+require_once('../assets/baglan.php');
 
 session_start();
 if (!isset($_SESSION['userName'])) {
     die('Giriş yetkiniz yok.');
-}
+};
 
+
+$mesajSayUrun = $db->prepare('select count(*) from mesajlar where durum="Okunmadı" and konuBaslik="ÜRÜNLER"');
+$mesajSayUrun->execute();
+$mesajSayUrunFetch=$mesajSayUrun->fetchColumn();
+
+$mesajSayServis = $db->prepare('select count(*) from mesajlar where durum="Okunmadı" and (konuBaslik="Satış Sonrası Destek" or konuBaslik="Servis")');
+$mesajSayServis->execute();
+$mesajSayServisFetch=$mesajSayServis->fetchColumn();
+
+$mesajSayDiger = $db->prepare('select count(*) from mesajlar where durum="Okunmadı" and konuBaslik="Hiçbiri"');
+$mesajSayDiger->execute();
+$mesajSayDigerFetch=$mesajSayDiger->fetchColumn();
 ?>
 
 <!DOCTYPE html>
@@ -42,9 +55,9 @@ if (!isset($_SESSION['userName'])) {
                     <a href="marka-model.php" style="text-decoration: none; color:#fff">Motosiklet Marka-Modelleri</a><br>
                     <a href="servis.php" class="text-white">Servis</a><br>
                     <a href="urun-listesi.php" class="text-white">Ürün Listesi</a><br>
-                    <a href="urunMesajlari.php" class="text-white">Ürün Mesajları</a><br>
-                    <a href="servisMesajlari.php" class="text-white">Servis Mesajları</a><br>
-                    <a href="digerMesajlar.php" class="text-white">Diğer Mesajlar</a><br>
+                    <a href="urunMesajlari.php" class="text-white">Ürün Mesajları<span class="badge bg-danger"><?php echo $mesajSayUrunFetch; ?></span></a><br>
+                    <a href="servisMesajlari.php" class="text-white">Servis ve Destek Mesajları<span class="badge bg-danger"><?php echo $mesajSayServisFetch; ?></span></a><br>
+                    <a href="digerMesajlar.php" class="text-white">Diğer Mesajlar<span class="badge bg-danger"><?php echo $mesajSayDigerFetch; ?></span></a><br>
                     <a href="fiyat.php" class="text-white">Fiyat Listesi</a><br>
                     <a href="logout.php" class="text-warning">Güvenli Çıkış</a>
                 </div>

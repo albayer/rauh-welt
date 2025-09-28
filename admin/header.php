@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once('../assets/baglan.php');
 
 session_start();
@@ -9,15 +9,16 @@ if (!isset($_SESSION['userName'])) {
 
 $mesajSayUrun = $db->prepare('select count(*) from mesajlar where durum="Okunmadı" and konuBaslik="ÜRÜNLER"');
 $mesajSayUrun->execute();
-$mesajSayUrunFetch=$mesajSayUrun->fetchColumn();
+$mesajSayUrunFetch = $mesajSayUrun->fetchColumn();
 
 $mesajSayServis = $db->prepare('select count(*) from mesajlar where durum="Okunmadı" and (konuBaslik="Satış Sonrası Destek" or konuBaslik="Servis")');
 $mesajSayServis->execute();
-$mesajSayServisFetch=$mesajSayServis->fetchColumn();
+$mesajSayServisFetch = $mesajSayServis->fetchColumn();
 
 $mesajSayDiger = $db->prepare('select count(*) from mesajlar where durum="Okunmadı" and konuBaslik="Hiçbiri"');
 $mesajSayDiger->execute();
-$mesajSayDigerFetch=$mesajSayDiger->fetchColumn();
+$mesajSayDigerFetch = $mesajSayDiger->fetchColumn();
+
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +60,7 @@ $mesajSayDigerFetch=$mesajSayDiger->fetchColumn();
                     <a href="servisMesajlari.php" class="text-white">Servis ve Destek Mesajları<span class="badge bg-danger"><?php echo $mesajSayServisFetch; ?></span></a><br>
                     <a href="digerMesajlar.php" class="text-white">Diğer Mesajlar<span class="badge bg-danger"><?php echo $mesajSayDigerFetch; ?></span></a><br>
                     <a href="fiyat.php" class="text-white">Fiyat Listesi</a><br>
+                    <a href="ebulten.php" class="text-white">Ebülten</a><br>
                     <a href="logout.php" class="text-warning">Güvenli Çıkış</a>
                 </div>
                 <div class="col-md-10 bg-light py-3">

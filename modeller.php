@@ -72,7 +72,7 @@
                                     </div>
                             <?php
                                 }
-                            } else {
+                            }else {
                                 echo "<p class='text-center'>Seçilen markaya ait model bulunamadı.</p>";
                             }
                             ?>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1:3306
--- Üretim Zamanı: 28 Eyl 2025, 15:13:35
+-- Üretim Zamanı: 28 Eyl 2025, 16:00:54
 -- Sunucu sürümü: 9.1.0
 -- PHP Sürümü: 8.3.14
 
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `ebulten` (
   `id` int NOT NULL AUTO_INCREMENT,
   `email` varchar(75) COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Tablo döküm verisi `ebulten`
@@ -82,8 +82,8 @@ CREATE TABLE IF NOT EXISTS `ebulten` (
 
 INSERT INTO `ebulten` (`id`, `email`) VALUES
 (1, 'alperen-bayer@hotmail.com'),
-(2, 'sdsadad'),
-(3, 'alperenbayer@gmail.com');
+(3, 'alperenbayer@gmail.com'),
+(4, 'test@gmail.com');
 
 -- --------------------------------------------------------
 

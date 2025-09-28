@@ -73,8 +73,8 @@ require_once('./header.php');
             <div class="row">
                 <div class="col-md-6" style="display: flex; align-items:center; flex-direction:column; justify-content:center;">
                     <b class="fs-3">SİZİN MOTOSİKLETİNİZ.SİZİN KURALLARINIZ.</b><br>
-                    <b>Motosikletinizi, vizyonunuzu hayata geçiren parçalar ve aksesuarlarla özelleştirin.</b>
-                    <a href="aksesuarlar.php" class="pt-4"><button class="btn btn-primary">Aksesuarlara Göz At</button></a>
+                    <b>Motosikletinizi servislerimizde vizyonunuzu hayata geçiren parçalar ve akesuarlarla özelleştirin.</b>
+                    <a href="servis.php" class="pt-4"><button class="btn btn-primary">Randevu Alın</button></a>
                 </div>
                 <div class="col-md-6">
                     <img src="./assets/img/choise.webp" alt="Aksesuar Reklamı İçin Kullanılan Görsel" class="img-fluid" style="margin-left: 12px;">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1:3306
--- Üretim Zamanı: 26 Eyl 2025, 16:35:08
+-- Üretim Zamanı: 28 Eyl 2025, 15:13:35
 -- Sunucu sürümü: 9.1.0
 -- PHP Sürümü: 8.3.14
 
@@ -204,12 +204,12 @@ CREATE TABLE IF NOT EXISTS `mesajlar` (
 --
 
 INSERT INTO `mesajlar` (`id`, `adSoyad`, `tel`, `email`, `konuBaslik`, `mesaj`, `durum`) VALUES
-(1, 'Alperen Bayer', '5344506123', 'alperen-bayer@hotmail.com', 'Hiçbiri', 'yardım edin', 'Okunmadı'),
+(1, 'Alperen Bayer', '5344506123', 'alperen-bayer@hotmail.com', 'Hiçbiri', 'yardım edin', 'Okundu'),
 (2, 'Alperen Bayer', '5344506123', 'alperen-bayer@hotmail.com', 'Hiçbiri', 'yardım edin lütfen//', 'Okunmadı'),
 (3, 'Alperen Bayer', '5344506123', 'alperen-bayer@hotmail.com', 'Satış Sonrası Destek', 'yardım edin lütfen//asd', 'Okundu'),
 (7, 'Alperen Bayer', '05344506123', 'alperen-bayer@hotmail.com', 'Hiçbiri', 'bunlar değil', 'Okundu'),
 (9, 'Alperen Bayer', '05344506123', 'alperen-bayer@hotmail.com', 'Satış Sonrası Destek', 'asdadsads', 'Okunmadı'),
-(10, 'Alperen Bayer', '05344506123', 'alperen-bayer@hotmail.com', 'Servis', 'asdadsads', 'Okundu'),
+(10, 'Alperen Bayer', '05344506123', 'alperen-bayer@hotmail.com', 'Servis', 'asdadsads', 'Okunmadı'),
 (11, 'Alperen Bayer', '05344506123', 'alperen-bayer@hotmail.com', 'Servis', 'asdadsads', 'Okunmadı'),
 (12, 'Alperen Bayer', '05344506123', 'alperen-bayer@hotmail.com', 'Servis', 'asdadsads', 'Okundu'),
 (13, 'Alperen Bayer', '05344506123', 'alperen-bayer@hotmail.com', 'ÜRÜNLER', 'asdadsads', 'Okunmadı'),

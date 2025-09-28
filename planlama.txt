@@ -1,18 +1,5 @@
 
-
----Yapılacaklar---
-
-----Modeller sayfasında yapılacaklar----
-    filtre olacak.
-
-
  ----Admin Paneli----
+---Front-end Yapılacaklar---
+---Back-end Yapılacaklar---
 
-
-
-
-ürün listesine manuel eklediğim indirimli fiyat hesaplama modulünü kayıt esnasında yapması için kayıt aşamasına bunu da ekleyeceğiz. vt'de veriler 0 fakat hesaplama yaptığım ürün-listesi sayfasında doğru geliyor.!!!
-
-
-
-admin sayfasında mesajlar için kaç adet okunmamış mesaj olduğu bilgisini veren baloncuk eklenecek.

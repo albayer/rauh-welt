@@ -118,21 +118,20 @@ require_once('./header.php');
     </section>
     <!-- Email Section End -->
     <!-- Marka Logoları Section Start -->
-    <section id="logolarSec" class="py-5">
+    <section id="logolarSec" class="py-5 bg-white">
         <div class="container">
-            <div class="row text-center" style="    display: flex; align-items: center;
-">
+            <div class="row text-center" style="display: flex; align-items: center;">
                 <div class="col-md-3">
-                    <img src="./assets/img/kawasaki-logo-400x238.webp" alt="" class="w-100">
+                    <img src="./assets/img/kawasaki.jpg" alt="" class="rounded img-fluid">
                 </div>
                 <div class="col-md-3">
-                    <img src="./assets/img/honda-logo-400x300.webp" alt="" class="w-75">
+                    <img src="./assets/img/honda.jpg" alt="" class="rounded img-fluid">
                 </div>
                 <div class="col-md-3">
-                    <img src="./assets/img/rks-logo-425x238.webp" alt="" class="w-100">
+                    <img src="./assets/img/yamaha.jpg" alt="" class="rounded img-fluid">
                 </div>
                 <div class="col-md-3">
-                    <img src="./assets/img/yamaha-logo-400x238.webp" alt="" class="w-100">
+                    <img src="./assets/img/suzuki.jpg" alt="" class="rounded img-fluid">
                 </div>
             </div>
         </div>

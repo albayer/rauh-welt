@@ -1,5 +1,0 @@
-
- ----Admin Paneli----
----Front-end Yapılacaklar---
----Back-end Yapılacaklar---
-

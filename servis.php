@@ -3,7 +3,6 @@
 <section id="servis" class="py-5">
     <div class="container">
         <div class="row">
-            Banner Gelebilir maybe
             <h2 class="text-center pt-4">Satış Sonrası Servis Ağımız</h2>
             <?php
             $servis = $db->prepare('select * from servis');

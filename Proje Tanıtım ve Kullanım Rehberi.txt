@@ -1,0 +1,102 @@
+Proje Tanıtımı ve Kullanım Kılavuzu
+Proje Adı: Rauh Welt Motorcycle
+1. Proje Amacı
+Bu proje, motosiklet satışını desteklemek amacıyla geliştirilmiş bir web sitesidir. Kullanıcıların motosiklet modellerini inceleyebilmesi, detaylı bilgilere 
+ulaşabilmesi ve satış sonrası destek hizmetlerinden yararlanabilmesi hedeflenmiştir. Sitede doğrudan çevrimiçi ödeme özelliği bulunmamakta, bunun yerine iletişim 
+formları aracılığıyla kullanıcıların bilgi talebi toplanmakta ve geri dönüş sağlanmaktadır.
+
+2. Site Özellikleri
+Kullanıcı Arayüzü (Frontend)
+
+	Ürünler Sayfası:
+	Motosiklet markaları ve modelleri listelenir. Kullanıcılar diledikleri ürünü seçerek detay sayfasına geçebilir.
+
+	Modeller Sayfası:
+	Seçilen motosiklete ait teknik bilgiler, açıklamalar ve görseller görüntülenir.
+
+	Servis Sayfası:
+	Yetkili servislerin listesi, adres ve iletişim bilgileriyle birlikte kullanıcıya sunulur.
+
+	Servis Sonrası Destek:
+	Kullanıcıların bakım, yedek parça veya garanti hizmetleri hakkında bilgi alabileceği sayfa.
+
+	İletişim Sayfası:
+	Form üzerinden mesaj gönderilebilir. Ayrıca e-posta adresleri ve telefon numaraları da paylaşılmıştır.
+
+	Politika ve Metinler:
+
+	KVKK (Kişisel Verilerin Korunması Kanunu)
+
+	Çerez Politikası
+
+	Kalite Politikası
+
+	Telif Hakları Bildirimi
+
+	Çevre Politikası
+
+	Bilgi Güvenliği Politikası
+
+	Fikir Gönderim Politikası
+
+	“Felsefemiz” Metni
+
+Admin Paneli (Backend)
+
+	Kullanıcı Mesajları Yönetimi:
+	İletişim formlarından gelen veriler listelenir, düzenlenir veya silinebilir.
+
+	Ürün Yönetimi:
+	Yeni ürün ekleme, mevcut ürünleri düzenleme ve silme işlemleri yapılabilir.
+
+	Servis ve İçerik Yönetimi:
+	Servis bilgileri, politikalar ve sayfa içerikleri yönetilebilir.
+
+	Veritabanı Entegrasyonu:
+	Tüm veriler (ürünler, servisler, kullanıcı formları vb.) veritabanında saklanmakta ve admin panelinden yönetilmektedir.
+
+3. Kullanım Kılavuzu
+Kullanıcılar İçin:
+
+	Siteye giriş yapıldığında ürünler ve diğer detaylar ana sayfada listelenir.
+
+	Kullanıcılar ilgilendikleri motosikleti seçerek detaylarını inceleyebilir.
+
+	Servisler ve satış sonrası destek sayfalarından hizmet bilgilerine ulaşılabilir.
+
+	İletişim sayfasındaki form üzerinden bilgi talebinde bulunulabilir.
+
+Yönetici (Admin) İçin:
+
+	Admin paneline giriş yapılarak yetkili kişi sisteme erişir.
+
+	Gelen kullanıcı formları incelenebilir, gerekli durumlarda düzenlenebilir veya silinebilir.
+
+	Yeni motosiklet veya servis bilgisi eklenebilir.
+
+	Site içerisinde yer alan politikalar ve metinler güncellenebilir.
+
+	Veritabanındaki tüm veriler güvenli bir şekilde yönetilir.
+
+4. Teknik Özellikler
+
+	Frontend: HTML, CSS, Bootstrap, JavaScript
+
+	Backend: PHP
+
+	Veritabanı: MySQL
+
+Özellikler:
+
+	Dinamik içerik yönetimi
+
+	Kullanıcı dostu arayüz
+
+	Admin paneli üzerinden tam kontrol
+
+	KVKK ve politikalar uyumlu metinler
+
+5. Sonuç
+
+Bu proje, motosiklet satışına yönelik profesyonel bir web sitesi örneği sunmaktadır. Kullanıcılar ürünleri kolayca inceleyebilmekte, servis ve destek hizmetlerine 
+ulaşabilmekte, iletişim kurabilmektedir. Yönetim tarafında ise admin paneli üzerinden ürünler ve kullanıcı verileri güvenli şekilde yönetilmektedir.
